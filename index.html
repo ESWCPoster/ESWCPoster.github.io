@@ -3,7 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Extraction of Union and Intersection Axioms from Biomedical Text</title>
+  <title><center>Extraction of Union and Intersection Axioms from Biomedical Text </center></title>
+  <p>
+ <center> Nikhil Sachdeva, Monika Jain, and Raghava Mutharaju </center>
+ </p>
 </head>
 
 <body itemscope itemtype="https://schema.org/WebPage">
@@ -16,94 +19,81 @@
   <meta itemprop="accessibilityAPI" content="ARIA">
 
 <!-- Header -->
-  <header itemscope itemtype="https://schema.org/Organization">
+  <header itemscope itemtype="https://schema.org/title">
     <h2 itemprop="name">
-      <a rel="home" itemprop="url" href="#">ExampleCorp Ltd</a>
+		    <hr style="color:#f45d06;">
+
+      <a rel="home" itemprop="url" href="#"><center>Extraction of Union and Intersection Axioms from Biomedical Text</center></a>
     </h2>
+
     <meta itemprop="logo" content="https://example.com/img/examplecorp-logo.png">
     <ul>
       <li>
-        <a rel="external" itemprop="sameAs" href="#">Follow us on Facebook</a>
+	   <h2 itemprop="title">
+      <a rel="home" itemprop="url"><center>Abstract</center></a>
+    </h2>
+        <a rel="external"  itemprop="sameAs">Many ontology, especially the ones created automatically by
+the ontology learning systems, have only shallow relationships between
+the concepts, i.e., simple subclass relations. Expressive axioms such as
+the class union and intersection are not part of the ontology. These expressive
+axioms make the ontology rich and play an essential role in the
+performance of downstream applications. However, such relations can
+generally be found in the text documents. We propose a mechanism and
+discuss our initial results in extracting union and intersection axioms
+from biomedical text using entity linking and taxonomic tree search.</a>
       </li>
-      <li>
-        <a rel="external" itemprop="sameAs" href="#">Follow us on LinkedIn</a>
-      </li>
-      <li>
-        <a rel="external" itemprop="sameAs" href="#">Follow us on Twitter</a>
-      </li>
+      
     </ul>
-    <p itemprop="telephone">+44 (0)0000 000000</p>
   </header>
 
 <!-- Navigation -->
-  <nav aria-label="Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-    <ul>
-      <li>
-        <a itemprop="url" href="#">Products</a>
-      </li>
-      <li>
-        <a itemprop="url" href="#">Services</a>
-      </li>
-      <li>
-        <a itemprop="url" href="#">About</a>
-      </li>
-      <li>
-        <a itemprop="url" href="#">Contact</a>
-      </li>
-    </ul>
-  </nav>
+  
 
   <main aria-label="Main content" itemscope itemtype="https://schema.org/Blog">
 
 <!-- Breadcrumbs -->
-    <nav aria-label="Breadcrumb navigation">
-      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="#"><span itemprop="name">Home</span></a>
-          <meta itemprop="position" content="1">
-        </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="#"><span itemprop="name">Blog</span></a>
-          <meta itemprop="position" content="2">
-        </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="#"><b itemprop="name">Blog article title</b></a>
-          <meta itemprop="position" content="3">
-        </li>
-      </ol>
-    </nav>
 
 <!-- Article -->
     <article itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
       <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
 
-      <h1 itemprop="name headline">Blog article title</h1>
+      <h1 itemprop="name headline">Introduction</h1>
 
       <p>
-        <time datetime="2015-03-26T10:43:39Z" itemprop="datePublished">26 Mar 2015</time>
-        <meta itemprop="dateModified" content="2017-04-11T12:52:01Z">
-      </p>
+	  Ontology learning [4] is the process of building ontologies automatically from
+text. Several ontology learning systems [5,1] such as Text2Onto1, Doodle OWL2
+and DL-Learner3 have been developed. Most of these systems support learning of
+classes, subclasses and taxonomic relationships. But they do not support mining
+of more expressive axioms from text such as union, intersection, quantiers and
+cardinality relation among the concepts. A richer and more expressive ontology
+can be very useful to the downstream applications such as recommendation
+systems and question and answering systems.
 
+<center>Consider axiom: C1 ⊑ C2 ⊔ C3 ⊔ C4</center>
+<center>These set of concepts can be diseases, symptoms, cures, side effects, etc.</center>
+      </p>
+<center>
       <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-        <img itemprop="url contentUrl" alt="Alt text" src="https://hive-framework.philwareham.co.uk/mockups/img/640x320.png">
+        <img itemprop="url contentUrl" alt="Alt text"  src="Photos/model.png"> 
         <meta itemprop="width" content="640">
         <meta itemprop="height" content="320">
-        <figcaption itemprop="caption">An example image caption.</figcaption>
+        <figcaption itemprop="caption">Architecture for extracting union and intersection axioms from the text.</figcaption>
       </figure>
-
+</center>
       <div itemprop="description">
-        <p><strong>Ex graeci civibus eleifend vim, mel et utroque fastidii.</strong></p>
+        <p><strong>Algorithm</strong></p>
       </div>
 
       <div itemprop="articleBody">
-        <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no. Causae option accusamus in est.</p>
+        <p>Algorithm 1 Linking the entity mentions in the text to the concepts in the
+ontology.</p>
         <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-          <img itemprop="url contentUrl" alt="Alt text" src="https://hive-framework.philwareham.co.uk/mockups/img/640x320.png">
+          <img itemprop="url contentUrl" alt="Alt text" src="Photos/algorithm.png">
           <meta itemprop="width" content="640">
           <meta itemprop="height" content="320">
         </p>
-        <h3>Ne sea soluta voluptatum</h3>
-        <p>Timeam mentitum an nam. Mei ne prima perfecto adversarium.</p>
+        <h3>Results and discussion</h3>
+        <p>Timeam mentitum an nam. Mei ne prima perfecto adversar</p>
         <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
           <img itemprop="url contentUrl" alt="Alt text" src="https://hive-framework.philwareham.co.uk/mockups/img/640x320.png">
           <meta itemprop="width" content="640">
