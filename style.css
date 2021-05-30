@@ -309,3 +309,22 @@ p, li {
 .volunteers {
     margin-bottom: 50px;
 }
+
+.carousel-item {
+    height: 45vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel .carousel-inner .carousel-item .authorList {
+    display: flex;
+    flex-direction: row;
+}
+
+.carousel .carousel-inner .carousel-item .leftDis {
+    text-align: left;
+}

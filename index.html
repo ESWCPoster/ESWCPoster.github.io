@@ -3,10 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title><center>Extraction of Union and Intersection Axioms from Biomedical Text </center></title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <title><center>Extraction of Union and Intersection Axioms from Biomedical Text </center></title>
   <p>
  <center> Nikhil Sachdeva, Monika Jain, and Raghava Mutharaju </center>
- </p>
+ </p> -->
 </head>
 
 <body itemscope itemtype="https://schema.org/WebPage">
@@ -19,7 +23,109 @@
   <meta itemprop="accessibilityAPI" content="ARIA">
 
 <!-- Header -->
-  <header itemscope itemtype="https://schema.org/title">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">KRaCR Lab</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header itemscope itemtype="https://schema.org/title">
+  <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" style="background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 51%, rgba(5,11,32,1) 100%);">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4" itemprop="name">Extraction of Union and Intersection Axioms from Biomedical Text</h3>
+        </div>
+      </div>
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,45,1) 49%, rgba(5,11,32,1) 100%);">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4 leftDis">Abstract</h3>
+          <p class="lead">Many ontology, especially the ones created automatically by
+            the ontology learning systems, have only shallow relationships between
+            the concepts, i.e., simple subclass relations. Expressive axioms such as
+            the class union and intersection are not part of the ontology. These expressive
+            axioms make the ontology rich and play an essential role in the
+            performance of downstream applications. However, such relations can
+            generally be found in the text documents. We propose a mechanism and
+            discuss our initial results in extracting union and intersection axioms
+            from biomedical text using entity linking and taxonomic tree search.</p>
+        </div>
+      </div>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,45,1) 49%, rgba(5,11,32,1) 100%);">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4 leftDis">Authors</h3>
+          <div class="authorList">
+            <div class="card">
+              <img src="img_avatar.png" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4><b>John Doe</b></h4> 
+                <p>Architect & Engineer</p> 
+              </div>
+            </div>
+            <div class="card">
+              <img src="img_avatar.png" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4><b>John Doe</b></h4> 
+                <p>Architect & Engineer</p> 
+              </div>
+            </div>
+            <div class="card">
+              <img src="img_avatar.png" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4><b>John Doe</b></h4> 
+                <p>Architect & Engineer</p> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
+</header>
+
+
+  <!-- <header itemscope itemtype="https://schema.org/title">
     <h2 itemprop="name">
 		    <hr style="color:#f45d06;">
 
@@ -44,7 +150,7 @@ from biomedical text using entity linking and taxonomic tree search.</a>
       </li>
       
     </ul>
-  </header>
+  </header> -->
 
 <!-- Navigation -->
   
