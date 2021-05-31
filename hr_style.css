@@ -1,0 +1,105 @@
+hr{
+	display:block;
+	border-top:30px solid #000;
+	z-index:-1;
+	left: 0px;
+	width:100%;
+	margin-top: 10vh;
+}
+hr.right{
+	left:auto;
+	right:0px;
+}
+ hr#thread1{
+	top: 0.8em;
+   border-color:#091022;
+	-webkit-animation: thread2 10s infinite;
+  	-moz-animation:    thread2 10s infinite;
+  	-o-animation:      thread2 10s infinite;
+  	animation:         thread2 10s infinite;	
+}
+hr#thread2{
+	top:1.8em;
+   border-color:#08297c;
+	/*right:15px;*/
+	-webkit-animation: thread2 8s infinite;
+  	-moz-animation:    thread2 8s infinite;
+  	-o-animation:      thread2 8s infinite;
+  	animation:         thread2 8s infinite;	
+}
+hr#thread3{
+	top:2.8em;
+/* 	right:15px; */
+	border-color:#b7bf33;
+	-webkit-animation: thread2 6s infinite;
+  	-moz-animation:    thread2 6s infinite;
+  	-o-animation:      thread2 6s infinite;
+  	animation:         thread2 6s infinite;	
+}
+hr#thread4{
+	top:3.8em;
+	border-color:#b23836;
+	-webkit-animation: thread2 12s infinite;
+  	-moz-animation:    thread2 12s infinite;
+  	-o-animation:      thread2 12s infinite;
+  	animation:         thread2 12s infinite;	
+}
+hr#thread5{
+	top:4.8em;
+	border-color:#3953a4;
+	-webkit-animation: thread2 16s infinite;
+  	-moz-animation:    thread2 16s infinite;
+  	-o-animation:      thread2 16s infinite;
+  	animation:         thread2 16s infinite;	
+}
+hr#thread6{
+	top:5.8em;
+	border-color:#38030a;
+	-webkit-animation: thread2 6s infinite;
+  	-moz-animation:    thread2 6s infinite;
+  	-o-animation:      thread2 6s infinite;
+  	animation:         thread2 6s infinite;	
+}
+@media (min-width: 768px) {
+   hr {
+	border-width:3px;
+  }
+
+
+}
+
+@media (min-width: 992px) {
+   hr {
+    
+  }
+}
+
+@media (min-width: 1200px) {
+   hr {
+    
+  }
+}
+@-webkit-keyframes thread2 {
+	  0%   { width: 100%; }
+	  50% { width: 100%; }
+	  80% { width: 0px;}
+	  100%{ width:100%;}
+	}
+	@-moz-keyframes thread2 {
+	  0%   { width: 100%; }
+	  50% { width: 100%; }
+	  80% { width: 0px;}
+	  100%{ width:100%;}
+	}
+	@-o-keyframes thread2 {
+	  0%   { width: 100%; }
+	  50% { width: 100%; }
+	  80% { width: 0px;}
+	  100%{ width:100%;}
+	}
+	@keyframes thread2 {
+	  0%   { width: 100%; }
+	  50% { width: 100%; }
+	  80% { width: 0px;}
+	  100%{ width:100%;}
+}

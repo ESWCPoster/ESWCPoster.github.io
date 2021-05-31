@@ -4,7 +4,12 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="hr_style.css">
+  <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
   <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
   <!-- <title><center>Extraction of Union and Intersection Axioms from Biomedical Text </center></title>
@@ -28,9 +33,9 @@
   <div class="container">
     <a class="navbar-brand" href="https://kracr-website.web.app/">KRaCR Lab</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
           <a class="nav-link" href="index.html">Home
@@ -47,10 +52,9 @@
           <a class="nav-link" href="contact.html">Contact Us</a>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </nav>
-
 
 <header itemscope itemtype="https://schema.org/title">
   <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
@@ -61,10 +65,13 @@
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background: rgb(2,0,36);
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 51%, rgba(5,11,32,1) 100%);">
+      <div class="carousel-item active">
+        <video autoplay muted loop id="myVideo">
+          <source src="Photos/video.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
         <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4" itemprop="name">Extraction of Union and Intersection Axioms from Biomedical Text</h3>
+          <h3 class="display-4" itemprop="name"><b></b>Extraction of Union and Intersection Axioms from Biomedical Text</b></h3>
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
@@ -83,35 +90,7 @@
             from biomedical text using entity linking and taxonomic tree search.</p>
         </div>
       </div>
-	
-	
-	 <!-- Slide four - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background: rgb(2,0,36);
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,45,1) 49%, rgba(5,11,32,1) 100%);">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4 leftDis">Motivation</h3>
-          <p class="lead">We propose a mechanism to extract union and intersection axioms from the
-text with the help of an ontology. Examples of intersection and union axioms are given in Axioms 1 and 2:
-<center>Mixed Glioma ⊑  Astrocytoma ∪ Oligodendroglioma (1)</center>
-<br>
-<center>Tumor ⊑  Benign ⊔ PreMalignant ⊔ Malignant (2)</center>
-        </div>
-      </div>
-	
-	 <!-- Slide five - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background: rgb(2,0,36);
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,45,1) 49%, rgba(5,11,32,1) 100%);">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4 leftDis">Architecture model</h3>
-          <p class="lead">We propose a mechanism to extract union and intersection axioms from the
-text with the help of an ontology. Examples of intersection and union axioms are given in Axioms 1 and 2:
-<center>Mixed Glioma ⊑  Astrocytoma ∪ Oligodendroglioma (1)</center>
-<br>
-<center>Tumor ⊑  Benign ⊔ PreMalignant ⊔ Malignant (2)</center>
-        </div>
-      </div>
-	
-	
+      
       <!-- Slide Three - Set the background image for this slide in the line below -->
       <div class="carousel-item" style="background: rgb(2,0,36);
       background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,45,1) 49%, rgba(5,11,32,1) 100%);">
@@ -135,7 +114,7 @@ text with the help of an ontology. Examples of intersection and union axioms are
             <div class="card">
               <img src="img_avatar.png" alt="Avatar" style="width:100%">
               <div class="container">
-                <h4><b>raghava Mutharaju</b></h4> 
+                <h4><b>Raghava Mutharaju</b></h4> 
                 <p>Knowledgeable Computing and Reasoning Lab, IIIT-Delhi, India</p> 
               </div>
             </div>
@@ -154,7 +133,6 @@ text with the help of an ontology. Examples of intersection and union axioms are
         </a>
   </div>
 </header>
-
 
   <!-- <header itemscope itemtype="https://schema.org/title">
     <h2 itemprop="name">
@@ -186,70 +164,138 @@ from biomedical text using entity linking and taxonomic tree search.</a>
 <!-- Navigation -->
   
 
-  <main aria-label="Main content" itemscope itemtype="https://schema.org/Blog">
+<main aria-label="Main content" itemscope itemtype="https://schema.org/Blog">
 
 <!-- Breadcrumbs -->
 
 <!-- Article -->
-    <article itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
+    <h1 itemprop="name headline">Introduction</h1>
+    <p class="lead">
+          Ontology learning [4] is the process of building ontologies automatically from
+      text. Several ontology learning systems [5,1] such as Text2Onto1, Doodle OWL2
+      and DL-Learner3 have been developed. Most of these systems support learning of
+      classes, subclasses and taxonomic relationships. But they do not support mining
+      of more expressive axioms from text such as union, intersection, quantiers and
+      cardinality relation among the concepts. A richer and more expressive ontology
+      can be very useful to the downstream applications such as recommendation
+      systems and question and answering systems.
+
+      <center><b>Consider axiom: C1 ⊑ C2 ⊔ C3 ⊔ C4</b></center>
+      <center><b>These set of concepts can be diseases, symptoms, cures, side effects, etc.</b></center>
+    </p>
+  </article>
+
+  <br><br>
+
+  <hr id="thread1">
+	<hr id="thread2">
+	<hr id="thread3" class="right">
+
+    <article class="right-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
       <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
+        <h1 itemprop="name headline">Motivation</h1>
+        <p class="lead">We propose a mechanism to extract union and intersection axioms from the
+          text with the help of an ontology. Examples of intersection and union axioms are given in Axioms 1 and 2:
+          <br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mixed Glioma ⊑  Astrocytoma ∪ Oligodendroglioma (1)
+          <br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tumor ⊑  Benign ⊔ PreMalignant ⊔ Malignant (2)
+        </p>
+    </article>
 
-     <center> <h1 itemprop="name headline">Introduction</h1> </center>
+    <br><br>
 
-      <p>
-	  Ontology learning [4] is the process of building ontologies automatically from
-text. Several ontology learning systems [5,1] such as Text2Onto1, Doodle OWL2
-and DL-Learner3 have been developed. Most of these systems support learning of
-classes, subclasses and taxonomic relationships. But they do not support mining
-of more expressive axioms from text such as union, intersection, quantiers and
-cardinality relation among the concepts. A richer and more expressive ontology
-can be very useful to the downstream applications such as recommendation
-systems and question and answering systems.
+  <hr id="thread4">
+  <hr id="thread5" class="right">
+  <hr id="thread6">
 
-<center>Consider axiom: C1 ⊑ C2 ⊔ C3 ⊔ C4</center>
-<center>These set of concepts can be diseases, symptoms, cures, side effects, etc.</center>
-      </p>
-<center>
-      <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-       <center> <img itemprop="url contentUrl" alt="Alt text"  src="Photos/model.png"> </center> 
-        <meta itemprop="width" content="640">
-        <meta itemprop="height" content="320">
-        <figcaption itemprop="caption">Architecture for extracting union and intersection axioms from the text.</figcaption>
-      </figure>
-</center>
-      <div itemprop="description">
-        <p><strong>Algorithm</strong></p>
+    <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+      <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
+      <div>
+        <h1 itemprop="name headline">Proposed Framework</h1>
       </div>
+      <center>
+            <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            <center> <img itemprop="url contentUrl" alt="Alt text"  src="Photos/model.png" style="width: 70%; height: auto;"> </center> 
+              <meta itemprop="width" content="640">
+              <meta itemprop="height" content="320">
+              <figcaption itemprop="caption">Architecture for extracting union and intersection axioms from the text.</figcaption>
+            </figure>
+      </center>
+      <div itemprop="description">
+        <!-- <p><strong>Algorithm</strong></p> -->
+      </div>
+    </article>
+  
+    <br><br>
 
+    <hr id="thread1">
+    <hr id="thread2">
+    <hr id="thread3" class="right">
+
+    <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+      <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
+      <div>
+        <h1 itemprop="name headline">Algorithm</h1>
+      </div>
       <div itemprop="articleBody">
-        <p>Algorithm 1 Linking the entity mentions in the text to the concepts in the
-ontology.</p>
+        <p>Algorithm 1 Linking the entity mentions in the text to the concepts in the ontology.</p>
         <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-          <img itemprop="url contentUrl" alt="Alt text" src="Photos/algorithm.png">
+          <img itemprop="url contentUrl" alt="Alt text" src="Photos/algorithm.png" style="width: 70%; height: auto;">
           <meta itemprop="width" content="640">
           <meta itemprop="height" content="320">
         </p>
-        <h3>Results and discussion</h3>
+      </div>
+    </article>
+
+    <br><br>
+
+  <hr id="thread4">
+  <hr id="thread5" class="right">
+  <hr id="thread6">
+
+    <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+      <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
+      <div>
+        <h1 itemprop="name headline">Results and discussion</h1>
+      </div>
+      <div itemprop="articleBody">
         <p>Timeam mentitum an nam. Mei ne prima perfecto adversar</p>
          <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-          <video controls poster="Photos/videoscreen.png">
+          <!-- <video controls poster="Photos/videoscreen.png">
             <source itemprop="contentUrl" type="video/mp4" src="Photos/video.mp4">
             <source itemprop="contentUrl" type="video/webm" src="https://hive-framework.philwareham.co.uk/video/big_buck_bunny.webm">
             I’m sorry, your browser doesn’t support HTML5 video in MP4 with H.264 or WebM with VP8/VP9.
-          </video>
+          </video> -->
         </div>
       </div>
-
-
-
-    
     </article>
+
+  <br><br>
+
+  <hr id="thread1">
+    <hr id="thread2">
+    <hr id="thread3" class="right">
 
   </main>
 
-  
+  <div class="footer-basic">
+    <footer>
+        <div class="social"><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-facebook"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="#">Services</a></li>
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Company Name © 2018</p>
+    </footer>
+  </div>
 
-  </aside>
+  <!-- </aside> -->
 
 </body>
 </html>

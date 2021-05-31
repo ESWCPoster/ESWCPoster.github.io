@@ -1,9 +1,5 @@
 body {
-    margin-left: 20px;
-    margin-right: 20px;
     font-family: serif;
-    padding-left: 4%;
-    padding-right: 4%;
 }
 
 img {
@@ -71,7 +67,7 @@ nav h1 {
 }
 
 main {
-    width: 64%;
+    width: 100%;
     margin-top: 2.2rem;
     display: inline-block;
 }
@@ -310,7 +306,32 @@ p, li {
     margin-bottom: 50px;
 }
 
+#myVideo {
+    width: inherit;
+    height: inherit;
+    -o-filter: blur(15px);
+    filter: blur(15px);
+    object-fit: cover;
+    transform: scale(1.04);
+}
+
+.left-boxing {
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 10%;
+}
+
+.right-boxing {
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 10%;
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,45,1) 49%, rgba(5,11,32,1) 100%); */
+    /* color: white; */
+}
+
 .carousel-item {
+    margin-top: 5vh;
     height: 45vh;
     min-height: 350px;
     background: no-repeat center center scroll;
