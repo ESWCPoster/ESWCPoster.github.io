@@ -97,8 +97,7 @@
                 </div>
                 <div class="card__social">
                   <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-google"></i></a>
                 </div>
               </div>
               <div class="card">
@@ -109,7 +108,7 @@
                 <div class="card__social">
                   <a href="#"><i class="fa fa-linkedin"></i></a>
                   <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-google"></i></a>
                 </div>
               </div>
               <div class="card">
@@ -120,7 +119,7 @@
                 <div class="card__social">
                   <a href="#"><i class="fa fa-linkedin"></i></a>
                   <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-google"></i></a>
                 </div>
               </div>
           </section>
@@ -146,7 +145,7 @@
     <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
     <h1 itemprop="name headline">Introduction</h1>
     <p class="lead">
-          Ontology learning [4] is the process of building ontologies automatically from
+      Ontology learning [4] is the process of building ontologies automatically from
       text. Several ontology learning systems [5,1] such as Text2Onto1, Doodle OWL2
       and DL-Learner3 have been developed. Most of these systems support learning of
       classes, subclasses and taxonomic relationships. But they do not support mining
@@ -154,7 +153,6 @@
       cardinality relation among the concepts. A richer and more expressive ontology
       can be very useful to the downstream applications such as recommendation
       systems and question and answering systems.
-
     </p>
   </article>
 
@@ -168,23 +166,27 @@
     <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
     <h1 itemprop="name headline">Motivation</h1>
     <p class="lead">
-      We propose a mechanism to extract union and intersection axioms from the text with the help of an ontology. Examples of intersection and union axioms are given in Axioms 1 and 2:
-      <br><br>
-      <Center> 
-        <b>   
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mixed Glioma ⊑  Astrocytoma ∪ Oligodendroglioma (1)
-        </b> 
-      </Center>
-      <br><br>
-      <Center> 
-        <b>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tumor ⊑  Benign ⊔ PreMalignant ⊔ Malignant (2)
-        </b>
-      <Center>
+      We propose a mechanism to extract union and intersection axioms from the text with the help of an ontology and its relevant text. Some examples of intersection and union axioms are as below:
+    </p>
+    <br>
+    <center> 
+      <b>   
+        Mixed Glioma ⊑  Astrocytoma ∪ Oligodendroglioma (1)
+      </b> 
+    </center>
+    <br>
+    <center> 
+      <b>
+        Tumor ⊑  Benign ⊔ PreMalignant ⊔ Malignant (2)
+      </b>
+    </center>
+    <br>
+    <p class="lead">
+      Take Relation (1). It can be critical in research of missing properties of any disease that is found as a type of Mixed Glioma based on the other classes of diseases in the relation. That is why, enriching the ontologies with such axioms increase their richness in terms of the information they can provide.
     </p>
   </article>
 
-  <br><br>
+  <br>
 
   <hr id="thread4">
   <hr id="thread5" class="right">
@@ -195,6 +197,9 @@
     <div>
       <h1 itemprop="name headline">Proposed Framework</h1>
     </div>
+    <p class="lead">
+      Please refer to the following architecture and the corresponding algorithm:
+    </p>
     <center>
       <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <img itemprop="url contentUrl" alt="Alt text"  src="Photos/model.png" style="width: 40%; height: 40%;"> 
@@ -204,17 +209,32 @@
       <meta itemprop="width" content="640">
       <meta itemprop="height" content="320">
     </center>
-    <div itemprop="description">
-      <!-- <p><strong>Algorithm</strong></p> -->
+    <div itemprop="articleBody">
+      <p class="lead">
+        As depicted in the architecture, the "Text" refers to all the articles that were extracted from the PubMed Central. All these articles are extracted based on their relevancy to the concepts of the Disease Ontology. Then, we extracted all the medically relevant entities, "[E1, E2, E3, ...]", from these articles using the SpaCy models for biomedical text processing and the Metamap application for recognizing those entities inthe UMLS Metathesaurus.
+        <br><br>
+        Now, every entity is compared against every concept of the Disease Ontology in two steps.
+        <div>
+          <h2 itemprop="name headline">Semantic Similarity</h2>
+        </div>
+        <div itemprop="description">
+          <p class="lead">
+            First, each pair of entiy and concept (e, c) is compared based on the cosine distance of their real-valued word embeddings generated from two different models: <b>BioWordVec</b> and a custom <b>Word2Vec</b> model. Embeddings from <b>BioWordVec</b> model capture the contextual information around an entity from the unlabelled biomedical text using the MeSH vocabulary. The custom model contains the word embeddings trained on the same articles that were extracted earlier from PubMed Central. When the pair passes the threshold of both the models, it is then passed on to second step, UMLS Metathesaurus.
+          </p>
+        </div>
+        <div>
+          <h2 itemprop="name headline">UMLS Graph Search</h2>
+        </div>
+        <div itemprop="description">
+          <p class="lead">
+            <b>UMLS Metathesaurus</b> is an semantic network of biomedical entities taken from more than 200 vocabularies. It provides various definitions, taxonomic and non-taxonomic relations for every entity present in the network.
+          </p>
+        </div>
+      </p>
     </div>
-  </article>
-  
-  <br><br>
 
-  <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
     <div>
-      <h1 itemprop="name headline">Scenarios</h1>
+      <h4 itemprop="name headline">Scenarios</h4>
     </div>
     <div itemprop="articleBody">
       <p>
