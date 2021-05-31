@@ -196,8 +196,6 @@ from biomedical text using entity linking and taxonomic tree search.</a>
       can be very useful to the downstream applications such as recommendation
       systems and question and answering systems.
 
-      <center><b>Consider axiom: C1 ⊑ C2 ⊔ C3 ⊔ C4</b></center>
-      <center><b>These set of concepts can be diseases, symptoms, cures, side effects, etc.</b></center>
     </p>
   </article>
 
@@ -213,9 +211,9 @@ from biomedical text using entity linking and taxonomic tree search.</a>
         <p class="lead">We propose a mechanism to extract union and intersection axioms from the
           text with the help of an ontology. Examples of intersection and union axioms are given in Axioms 1 and 2:
           <br><br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mixed Glioma ⊑  Astrocytoma ∪ Oligodendroglioma (1)
+      <Center> <b>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mixed Glioma ⊑  Astrocytoma ∪ Oligodendroglioma (1)</b> </Center>
           <br><br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tumor ⊑  Benign ⊔ PreMalignant ⊔ Malignant (2)
+         <Center> <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tumor ⊑  Benign ⊔ PreMalignant ⊔ Malignant (2)</b><Center>
         </p>
     </article>
 
@@ -232,7 +230,7 @@ from biomedical text using entity linking and taxonomic tree search.</a>
       </div>
       <center>
             <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-            <center> <img itemprop="url contentUrl" alt="Alt text"  src="Photos/model.png" style="width: 70%; height: auto;"> </center> 
+            <center> <img itemprop="url contentUrl" alt="Alt text"  src="Photos/model.png" style="width: 50%; height: ;"> </center> 
               <meta itemprop="width" content="640">
               <meta itemprop="height" content="320">
               <figcaption itemprop="caption">Architecture for extracting union and intersection axioms from the text.</figcaption>
@@ -257,14 +255,48 @@ from biomedical text using entity linking and taxonomic tree search.</a>
       <div itemprop="articleBody">
         <p>Algorithm 1 Linking the entity mentions in the text to the concepts in the ontology.</p>
         <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-          <img itemprop="url contentUrl" alt="Alt text" src="Photos/algorithm.png" style="width: 70%; height: auto;">
+          <img itemprop="url contentUrl" alt="Alt text" src="Photos/algorithm.png" style="width: 50%; height: 30%;">
           <meta itemprop="width" content="640">
           <meta itemprop="height" content="320">
         </p>
+		
       </div>
     </article>
 
     <br><br>
+	<br><br>
+
+    
+
+	  <hr id="thread1">
+    <hr id="thread2">
+    <hr id="thread3" class="right">
+
+    <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+      <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
+      <div>
+        <h1 itemprop="name headline">Algorithm</h1>
+      </div>
+      <div itemprop="articleBody">
+        <p>(a) represents scenario-1 where entity e is a descendant of concept c.</p>
+       <div class="row">
+  <div class="column">
+    <img src=Photos/part1.png alt="Snow" style="width:70%; height: 70%;">
+  </div>
+<p> (b) represents scenario-2 where both Entity e and Concept c have a common ancestor L. </p>
+       <div class="row">
+
+  <div class="column">
+    <img src=Photos/part2.png alt="Forest" style="width:70%; height: 70%;">
+  </div>
+
+</div>
+      </div>
+    </article>
+
+    <br><br>
+	<br><br>
+
 
   <hr id="thread4">
   <hr id="thread5" class="right">
@@ -276,7 +308,19 @@ from biomedical text using entity linking and taxonomic tree search.</a>
         <h1 itemprop="name headline">Results and discussion</h1>
       </div>
       <div itemprop="articleBody">
-        <p>Timeam mentitum an nam. Mei ne prima perfecto adversar</p>
+        <p>We could not find any biomedical ontology that has union and intersection ax-
+ioms along with the concepts that have instances for evaluating our model. More-
+over, there is no dataset having such ontologies and the corresponding text cor-
+pora in the medical domain.We choose the Disease ontology10 as it is rich in such
+axioms, but it lacks the concept-instance pairs. So we made an approximation
+here and preprocessed the ontology. We observed that the lowermost leaf-child concept could act as an instance of the directly connected parent class. Subse-
+quently, it can be connected as an instance of all the subsequent parent classes
+in the hierarchy. This process is executed for all the leaf-nodes in the ontology.
+We extracted 739 articles from PubMed Central11 based on the concepts in the
+Disease Ontology. Within the ontology, there are a total of 10,085 intersection
+axioms and 323 union axioms. Based on the extracted articles and the Disease
+ontology, the F1 scores for the union axioms is 0.142, and for the intersection
+axioms, it is 0.1908.</p>
          <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
           <!-- <video controls poster="Photos/videoscreen.png">
             <source itemprop="contentUrl" type="video/mp4" src="Photos/video.mp4">
