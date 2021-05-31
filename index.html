@@ -13,10 +13,6 @@
   <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
   <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-  <!-- <title><center>Extraction of Union and Intersection Axioms from Biomedical Text </center></title>
-  <p>
- <center> Nikhil Sachdeva, Monika Jain, and Raghava Mutharaju </center>
- </p> -->
 </head>
 
 <body itemscope itemtype="https://schema.org/WebPage">
@@ -145,8 +141,6 @@
 
 <main aria-label="Main content" itemscope itemtype="https://schema.org/Blog">
 
-<!-- Breadcrumbs -->
-
 <!-- Article -->
   <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
     <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
@@ -170,101 +164,110 @@
 	<hr id="thread2">
 	<hr id="thread3" class="right">
 
-    <article class="right-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-      <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
-        <h1 itemprop="name headline">Motivation</h1>
-        <p class="lead">We propose a mechanism to extract union and intersection axioms from the
-          text with the help of an ontology. Examples of intersection and union axioms are given in Axioms 1 and 2:
-          <br><br>
-      <Center> <b>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mixed Glioma ⊑  Astrocytoma ∪ Oligodendroglioma (1)</b> </Center>
-          <br><br>
-         <Center> <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tumor ⊑  Benign ⊔ PreMalignant ⊔ Malignant (2)</b><Center>
-        </p>
-    </article>
+  <article class="right-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
+    <h1 itemprop="name headline">Motivation</h1>
+    <p class="lead">
+      We propose a mechanism to extract union and intersection axioms from the text with the help of an ontology. Examples of intersection and union axioms are given in Axioms 1 and 2:
+      <br><br>
+      <Center> 
+        <b>   
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mixed Glioma ⊑  Astrocytoma ∪ Oligodendroglioma (1)
+        </b> 
+      </Center>
+      <br><br>
+      <Center> 
+        <b>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tumor ⊑  Benign ⊔ PreMalignant ⊔ Malignant (2)
+        </b>
+      <Center>
+    </p>
+  </article>
 
-    <br><br>
+  <br><br>
 
   <hr id="thread4">
   <hr id="thread5" class="right">
   <hr id="thread6">
 
-    <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-      <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
-      <div>
-        <h1 itemprop="name headline">Proposed Framework</h1>
-      </div>
-      <center>
-        <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-          <img itemprop="url contentUrl" alt="Alt text"  src="Photos/model.png" style="width: 40%; height:40 ;"> 
-          <img itemprop="url contentUrl" alt="Alt text" src="Photos/algorithm.png" style="width: 40%; height: 40%;">
-          <figcaption itemprop="caption">Architecture for extracting union and intersection axioms from the text.</figcaption>
-        </figure>
+  <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
+    <div>
+      <h1 itemprop="name headline">Proposed Framework</h1>
+    </div>
+    <center>
+      <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+        <img itemprop="url contentUrl" alt="Alt text"  src="Photos/model.png" style="width: 40%; height: 40%;"> 
+        <img itemprop="url contentUrl" alt="Alt text" src="Photos/algorithm.png" style="width: 40%; height: 40%;">
+        <figcaption itemprop="caption">Architecture for extracting union and intersection axioms from the text.</figcaption>
+      </figure>
+      <meta itemprop="width" content="640">
+      <meta itemprop="height" content="320">
+    </center>
+    <div itemprop="description">
+      <!-- <p><strong>Algorithm</strong></p> -->
+    </div>
+  </article>
+  
+  <br><br>
+
+  <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
+    <div>
+      <h1 itemprop="name headline">Scenarios</h1>
+    </div>
+    <div itemprop="articleBody">
+      <p>
+        (a) represents scenario-1 where entity e is a descendant of concept c and (b) represents scenario-2 where both Entity e and Concept c have a common ancestor L.
+      </p>
+      <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+        <center>
+          <img itemprop="url contentUrl" alt="Alt text" src="Photos/part1.png" style="width: 30%; height: 30%;">
+          <img itemprop="url contentUrl" alt="Alt text" src="Photos/part2.png" style="width: 30%; height: 30%;">
+        </center>
         <meta itemprop="width" content="640">
         <meta itemprop="height" content="320">
-      </center>
-      <div itemprop="description">
-        <!-- <p><strong>Algorithm</strong></p> -->
-      </div>
-    </article>
+      </p>
+    </div>
+  </article>
   
-    <br><br>
-
-    <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-      <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
-      <div>
-        <h1 itemprop="name headline">Scenarios</h1>
-      </div>
-      <div itemprop="articleBody">
-        <p>
-          (a) represents scenario-1 where entity e is a descendant of concept c and (b) represents scenario-2 where both Entity e and Concept c have a common ancestor L.
-        </p>
-        <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-		      <center>
-            <img itemprop="url contentUrl" alt="Alt text" src="Photos/part1.png" style="width: 30%; height: 30%;">
-		        <img itemprop="url contentUrl" alt="Alt text" src="Photos/part2.png" style="width: 30%; height: 30%;">
-          </center>
-          <meta itemprop="width" content="640">
-          <meta itemprop="height" content="320">
-        </p>
-		
-      </div>
-    </article>
-
-    <br><br>
+  <br><br>
 
   <hr id="thread1">
-    <hr id="thread2">
-    <hr id="thread3" class="right">
+  <hr id="thread2">
+  <hr id="thread3" class="right">
 
-    <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-      <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
-      <div>
-        <h1 itemprop="name headline">Results and discussion</h1>
+  <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
+    <div>
+      <h1 itemprop="name headline">Results and discussion</h1>
+    </div>
+    <div itemprop="articleBody">
+      <p>
+        We could not find any biomedical ontology that has union and intersection ax-
+        ioms along with the concepts that have instances for evaluating our model. More-
+        over, there is no dataset having such ontologies and the corresponding text cor-
+        pora in the medical domain.We choose the Disease ontology10 as it is rich in such
+        axioms, but it lacks the concept-instance pairs. So we made an approximation
+        here and preprocessed the ontology. We observed that the lowermost leaf-child 
+        concept could act as an instance of the directly connected parent class. Subse-
+        quently, it can be connected as an instance of all the subsequent parent classes
+        in the hierarchy. This process is executed for all the leaf-nodes in the ontology.
+        We extracted 739 articles from PubMed Central11 based on the concepts in the
+        Disease Ontology. Within the ontology, there are a total of 10,085 intersection
+        axioms and 323 union axioms. Based on the extracted articles and the Disease
+        ontology, the F1 scores for the union axioms is 0.142, and for the intersection
+        axioms, it is 0.1908.
+      </p>
+      <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
+        <!-- <video controls poster="Photos/videoscreen.png">
+          <source itemprop="contentUrl" type="video/mp4" src="Photos/video.mp4">
+          <source itemprop="contentUrl" type="video/webm" src="https://hive-framework.philwareham.co.uk/video/big_buck_bunny.webm">
+          I’m sorry, your browser doesn’t support HTML5 video in MP4 with H.264 or WebM with VP8/VP9.
+        </video> -->
       </div>
-      <div itemprop="articleBody">
-        <p>We could not find any biomedical ontology that has union and intersection ax-
-          ioms along with the concepts that have instances for evaluating our model. More-
-          over, there is no dataset having such ontologies and the corresponding text cor-
-          pora in the medical domain.We choose the Disease ontology10 as it is rich in such
-          axioms, but it lacks the concept-instance pairs. So we made an approximation
-          here and preprocessed the ontology. We observed that the lowermost leaf-child 
-          concept could act as an instance of the directly connected parent class. Subse-
-          quently, it can be connected as an instance of all the subsequent parent classes
-          in the hierarchy. This process is executed for all the leaf-nodes in the ontology.
-          We extracted 739 articles from PubMed Central11 based on the concepts in the
-          Disease Ontology. Within the ontology, there are a total of 10,085 intersection
-          axioms and 323 union axioms. Based on the extracted articles and the Disease
-          ontology, the F1 scores for the union axioms is 0.142, and for the intersection
-          axioms, it is 0.1908.</p>
-         <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-          <!-- <video controls poster="Photos/videoscreen.png">
-            <source itemprop="contentUrl" type="video/mp4" src="Photos/video.mp4">
-            <source itemprop="contentUrl" type="video/webm" src="https://hive-framework.philwareham.co.uk/video/big_buck_bunny.webm">
-            I’m sorry, your browser doesn’t support HTML5 video in MP4 with H.264 or WebM with VP8/VP9.
-          </video> -->
-        </div>
-      </div>
-    </article>
+    </div>
+  </article>
 
   <br><br>
 
@@ -278,13 +281,12 @@
       <h1 itemprop="name headline">References</h1>
     </div>
     <div itemprop="articleBody">
-      
-       <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-        <!-- <video controls poster="Photos/videoscreen.png">
-          <source itemprop="contentUrl" type="video/mp4" src="Photos/video.mp4">
-          <source itemprop="contentUrl" type="video/webm" src="https://hive-framework.philwareham.co.uk/video/big_buck_bunny.webm">
-          I’m sorry, your browser doesn’t support HTML5 video in MP4 with H.264 or WebM with VP8/VP9.
-        </video> -->
+      <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
+      <!-- <video controls poster="Photos/videoscreen.png">
+        <source itemprop="contentUrl" type="video/mp4" src="Photos/video.mp4">
+        <source itemprop="contentUrl" type="video/webm" src="https://hive-framework.philwareham.co.uk/video/big_buck_bunny.webm">
+        I’m sorry, your browser doesn’t support HTML5 video in MP4 with H.264 or WebM with VP8/VP9.
+      </video> -->
       </div>
     </div>
   </article>
@@ -292,26 +294,24 @@
   <br><br>
 
   <hr id="thread1">
-    <hr id="thread2">
-    <hr id="thread3" class="right">  
+  <hr id="thread2">
+  <hr id="thread3" class="right">  
 
-  </main>
+</main>
 
-  <div class="footer-basic">
-    <footer>
-        <div class="social"><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-facebook"></i></a></div>
-        <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">Home</a></li>
-            <li class="list-inline-item"><a href="#">Services</a></li>
-            <li class="list-inline-item"><a href="#">About</a></li>
-            <li class="list-inline-item"><a href="#">Terms</a></li>
-            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-        </ul>
-        <p class="copyright">Company Name © 2018</p>
-    </footer>
-  </div>
-
-  <!-- </aside> -->
+<div class="footer-basic">
+  <footer>
+      <div class="social"><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-facebook"></i></a></div>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Home</a></li>
+          <li class="list-inline-item"><a href="#">Services</a></li>
+          <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+      </ul>
+      <p class="copyright">Company Name © 2018</p>
+  </footer>
+</div>
 
 </body>
 </html>
