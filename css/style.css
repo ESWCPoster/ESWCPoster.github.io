@@ -281,26 +281,26 @@ font-weight:bold;
     width: 80%;
 }
 
-.card-title a {
+/* .card-title a {
     text-decoration: none;
 }
 
 .card-body {
     width: auto;
     padding-left: 0px;
-}
+} */
 
 p, li {
     text-align: justify;
 }
 
-.card {
+/* .card {
     border: 0px;
 }
 
 .card img {
     width: 150px !important;
-}
+} */
 
 .volunteers {
     margin-bottom: 50px;
@@ -325,9 +325,6 @@ p, li {
     margin-top: 5%;
     padding-left: 5%;
     padding-right: 10%;
-    /* background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,45,1) 49%, rgba(5,11,32,1) 100%); */
-    /* color: white; */
 }
 
 .carousel-item {
@@ -346,6 +343,6 @@ p, li {
     flex-direction: row;
 }
 
-.carousel .carousel-inner .carousel-item .leftDis {
+/* .carousel .carousel-inner .carousel-item .leftDis {
     text-align: left;
-}
+} */
