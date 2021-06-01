@@ -144,8 +144,8 @@
     <meta itemprop="mainEntityOfPage" content="index.html">
     <h1 itemprop="headline"><span itemprop="name">Introduction</span></h1>
     <p class="lead" itemprop="articleBody">
-      Ontology learning [4] is the process of building ontologies automatically from
-      text. Several ontology learning systems [5,1] such as Text2Onto1, Doodle OWL2
+      Ontology learning [2] is the process of building ontologies automatically from
+      text. Several ontology learning systems [3,1] such as Text2Onto1, Doodle OWL2
       and DL-Learner3 have been developed. Most of these systems support learning of
       classes, subclasses and taxonomic relationships. But they do not support mining
       of more expressive axioms from text such as union, intersection, quantifiers and
@@ -211,7 +211,7 @@
     </center>
     <div itemprop="articleBody">
       <p class="lead">
-        As depicted in the architecture, the "Text" refers to all the articles that were extracted from the PubMed Central. All these articles are extracted based on their relevancy to the concepts of the Disease Ontology. Then, we extracted all the medically relevant entities, "[E1, E2, E3, ...]", from these articles using the SpaCy models for biomedical text processing and the Metamap application for recognizing those entities inthe UMLS Metathesaurus.
+        As depicted in the architecture, the "Text" refers to all the articles that were extracted from the <a href="https://www.ncbi.nlm.nih.gov/pmc/" itemprop="url"><span itemprop="name">PubMed Central</span></a>. All these articles are extracted based on their relevancy to the concepts of the <a href="https://disease-ontology.org/" itemprop="url"><span itemprop="name">Disease Ontology</span></a>. Then, we extracted all the medically relevant entities, "[E1, E2, E3, ...]", from these articles using the <a href="https://allenai.github.io/scispacy/" itemprop="url"><span itemprop="name">SpaCy models</span></a> for biomedical text processing and the Metamap application for recognizing those entities in the UMLS Metathesaurus.
         <br><br>
         Now, every entity is compared against every concept of the Disease Ontology in two steps.
         <div>
@@ -219,7 +219,7 @@
         </div>
         <div itemprop="description">
           <p class="lead">
-            First, each pair of entiy and concept (e, c) is compared based on the cosine distance of their real-valued word embeddings generated from two different models: <b>BioWordVec</b> and a custom <b>Word2Vec</b> model. Embeddings from <b>BioWordVec</b> model capture the contextual information around an entity from the unlabelled biomedical text using the MeSH vocabulary. The custom model contains the word embeddings trained on the same articles that were extracted earlier from PubMed Central. When the pair passes the threshold of both the models, it is then passed on to second step, UMLS Metathesaurus.
+            First, each pair of entiy and concept (e, c) is compared based on the cosine distance of their real-valued word embeddings generated from two different models: <b>BioWordVec</b>[4] and a custom <b>Word2Vec</b> model. Embeddings from <b>BioWordVec</b> model capture the contextual information around an entity from the unlabelled biomedical text using the MeSH vocabulary. The custom model contains the word embeddings trained on the same articles that were extracted earlier from PubMed Central. When the pair passes the threshold of both the models, it is then passed on to second step, UMLS Metathesaurus.
           </p>
         </div>
         <div>
@@ -227,7 +227,7 @@
         </div>
         <div itemprop="description">
           <p class="lead">
-            <b>UMLS Metathesaurus</b> is an semantic network of biomedical entities taken from more than 200 vocabularies. It provides various definitions, taxonomic and non-taxonomic relations for every entity present in the network.
+            <b><a href="https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/index.html" itemprop="url"><span itemprop="name">UMLS Metathesaurus</span></a></b> is an semantic network of biomedical entities taken from more than 200 vocabularies. It provides various definitions, taxonomic and non-taxonomic relations for every entity present in the network.
           </p>
         </div>
       </p>
@@ -249,7 +249,7 @@
         <meta itemprop="height" content="320">
       </p>
       <p class="lead">
-        In <b>Scenario-1</b>, the entity can be the descendant of the concept itself whereas in <b>Scenario-2</b>, the pair will have a least common ancestor (L). Using UMLS Metamap, we compare the number of semantic groups the pairs <b>(e,L)</b> and <b>(c,L)</b> share. A semantic group is a broader group that a term (entity or concept in our case) can be a part of, according to Metamap. Further, we compare the UMLS generated context vectors of <b>(e,c)</b> and <b>L</b> (taken two at a time), using cosine measure. Based on these scores, we determine if <b>e is an instance of c</b>.
+        In <b>Scenario-1</b>, the entity can be the descendant of the concept itself whereas in <b>Scenario-2</b>, the pair will have a least common ancestor (L). Using <a href="https://metamap.nlm.nih.gov/"><span itemprop="name">UMLS Metamap</span></a>, we compare the number of semantic groups the pairs <b>(e,L)</b> and <b>(c,L)</b> share. A semantic group is a broader group that a term (entity or concept in our case) can be a part of, according to Metamap. Further, we compare the UMLS generated context vectors of <b>(e,c)</b> and <b>L</b> (taken two at a time), using cosine measure. Based on these scores, we determine if <b>e is an instance of c</b>.
         <br>
         Do note that if a pair <b>(e,c)</b> is added to the ontology, then the entity <b>e</b> will be added as an instance of all the parent classes of <b>c</b>.
       </p>
@@ -282,7 +282,7 @@
         <br>
         Furthermore, to improve the architecture, we are working on incorporating English language pattern heuristics where we can apply the syntactical rules to extract axioms from unstructured text robustly.
         <br>
-        We are also working on fine-tuned deep learning models like BERT to improve the contextual word embeddings for the target word.
+        We are also working on fine-tuned deep learning models like BERT[5] to improve the contextual word embeddings for the target word.
       </p>
       <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
         <!-- <video controls poster="Photos/videoscreen.png">
@@ -306,13 +306,16 @@
       <h1 itemprop="name headline">References</h1>
     </div>
     <div itemprop="articleBody">
-      <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-      <!-- <video controls poster="Photos/videoscreen.png">
-        <source itemprop="contentUrl" type="video/mp4" src="Photos/video.mp4">
-        <source itemprop="contentUrl" type="video/webm" src="https://hive-framework.philwareham.co.uk/video/big_buck_bunny.webm">
-        I’m sorry, your browser doesn’t support HTML5 video in MP4 with H.264 or WebM with VP8/VP9.
-      </video> -->
-      </div>
+      <p itemprop="description">
+        <ol class="lead">
+          <li>Asim, M.N., Wasim, M., Khan, M.U.G., Mahmood, W., Abbasi, H.M.: A Survey of Ontology Learning Techniques and Applications. Database (2018)</li>
+          <li> Lehmann, J., Volker, J.: An Introduction to Ontology Learning. In: Perspectives on Ontology Learning, pp. ix–xvi. IOS Press (2014)</li>
+          <li> Wong, W., Liu, W., Bennamoun, M.: Ontology Learning from Text: A look Back and into the Future. ACM Computing Surveys (2012)</li>
+          <li>Yijia, Z., Chen, Q., Yang, Z., Lin, H., lu, Z.: Biowordvec, Improving Biomedical Word Embeddings with Subword Information and Mesh. Scientific Data (Dec 2019)</li>
+          <li> Devlin, J., Chang, M.W., Lee, K., Toutanova, K.: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. In: Proceedings of the 2019 Conference of the NAACL) (Jun 2019)</li>
+          <li>Karadeniz, I., Ozgur, A.: Linking Entities through an Ontology using Word Embeddings and Syntactic Re-ranking. BMC Bioinformatics (Dec 2019)</li>
+        </ol>
+      </p>
     </div>
   </article>
 
