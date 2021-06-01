@@ -96,8 +96,8 @@
                   <h3 class="card__heading">Nikhil Sachdeva</h3>
                 </div>
                 <div class="card__social">
+                  <a href="https://scholar.google.com/citations?hl=en&user=QbaFVuYAAAAJ"><i class="fa fa-google"></i></a>
                   <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-google"></i></a>
                 </div>
               </div>
               <div class="card">
@@ -106,9 +106,8 @@
                   <h3 class="card__heading">Monika Jain</h3>
                 </div>
                 <div class="card__social">
+                  <a href="https://scholar.google.com/citations?user=lRf7z-oAAAAJ&hl=en"><i class="fa fa-google"></i></a>
                   <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-google"></i></a>
                 </div>
               </div>
               <div class="card">
@@ -117,9 +116,9 @@
                   <h3 class="card__heading">Raghava Mutharaju</h3>
                 </div>
                 <div class="card__social">
+                  <a href="https://scholar.google.com/citations?user=69pEM_YAAAAJ&hl=en"><i class="fa fa-google"></i></a>
                   <a href="#"><i class="fa fa-linkedin"></i></a>
                   <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-google"></i></a>
                 </div>
               </div>
           </section>
@@ -232,21 +231,29 @@
         </div>
       </p>
     </div>
-
+    <p class="lead">
+      Within Metathesaurus, the pair (e,c) is compared based on two scenarios:
+    </p>
     <div>
       <h4 itemprop="name headline">Scenarios</h4>
     </div>
     <div itemprop="articleBody">
-      <p>
-        (a) represents scenario-1 where entity e is a descendant of concept c and (b) represents scenario-2 where both Entity e and Concept c have a common ancestor L.
+      <p class="lead">
+        
       </p>
       <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <center>
           <img itemprop="url contentUrl" alt="Alt text" src="Photos/part1.png" style="width: 30%; height: 30%;">
           <img itemprop="url contentUrl" alt="Alt text" src="Photos/part2.png" style="width: 30%; height: 30%;">
+          <figcaption itemprop="caption">(a) represents scenario-1 where entity e is a descendant of concept c and (b) represents scenario-2 where both Entity e and Concept c have a common ancestor L.</figcaption>
         </center>
         <meta itemprop="width" content="640">
         <meta itemprop="height" content="320">
+      </p>
+      <p class="lead">
+        In <b>Scenario-1</b>, the entity can be the descendant of the concept itself whereas in <b>Scenario-2</b>, the pair will have a least common ancestor (L). Using UMLS Metamap, we compare the number of semantic groups the pairs <b>(e,L)</b> and <b>(c,L)</b> share. A semantic group is a broader group that a term (entity or concept in our case) can be a part of, according to Metamap. Further, we compare the UMLS generated context vectors of <b>(e,c)</b> and <b>L</b> (taken two at a time), using cosine measure. Based on these scores, we determine if <b>e is an instance of c</b>.
+        <br>
+        Do note that if a pair <b>(e,c)</b> is added to the ontology, then the entity <b>e</b> will be added as an instance of all the parent classes of <b>c</b>.
       </p>
     </div>
   </article>
@@ -263,21 +270,21 @@
       <h1 itemprop="name headline">Results and discussion</h1>
     </div>
     <div itemprop="articleBody">
-      <p>
-        We could not find any biomedical ontology that has union and intersection ax-
-        ioms along with the concepts that have instances for evaluating our model. More-
-        over, there is no dataset having such ontologies and the corresponding text cor-
-        pora in the medical domain.We choose the Disease ontology10 as it is rich in such
-        axioms, but it lacks the concept-instance pairs. So we made an approximation
-        here and preprocessed the ontology. We observed that the lowermost leaf-child 
-        concept could act as an instance of the directly connected parent class. Subse-
-        quently, it can be connected as an instance of all the subsequent parent classes
-        in the hierarchy. This process is executed for all the leaf-nodes in the ontology.
-        We extracted 739 articles from PubMed Central11 based on the concepts in the
-        Disease Ontology. Within the ontology, there are a total of 10,085 intersection
-        axioms and 323 union axioms. Based on the extracted articles and the Disease
-        ontology, the F1 scores for the union axioms is 0.142, and for the intersection
-        axioms, it is 0.1908.
+      <h4>DataSet Discussion</h4>
+      <p class="lead">
+        We could not find any biomedical ontology that has union and intersection axioms along with the concepts that have instances for evaluating our model. Moreover, there is no dataset having such ontologies and the corresponding text corpora in the medical domain. We choose the Disease ontology[10] as it is rich in such axioms, but it lacks the concept-instance pairs. So we made an approximation here and preprocessed the ontology. We observed that the lowermost leaf-child concept could act as an instance of the directly connected parent class. Subsequently, it can be connected as an instance of all the subsequent parent classes in the hierarchy. This process is executed for all the leaf-nodes in the ontology.
+      </p>
+      <h4>Evaluations</h4>
+      <p class="lead">
+         We extracted 739 articles from PubMed Central[11] based on the concepts in the Disease Ontology. Within the ontology, there are a total of 10,085 intersection axioms and 323 union axioms. Based on the extracted articles and the Disease ontology, the F1 scores for the union axioms is 0.142, and for the intersection axioms, it is 0.1908.
+      </p>
+      <h4>Future Scorp</h4>
+      <p class="lead">
+        There was the unavailability of a proper dataset consisting of a complete and rich ontology with the corresponding text corpora. Therefore, constructing a relevant dataset and defining baselines are some of the tasks of our future work.
+        <br>
+        Furthermore, to improve the architecture, we are working on incorporating English language pattern heuristics where we can apply the syntactical rules to extract axioms from unstructured text robustly.
+        <br>
+        We are also working on fine-tuned deep learning models like BERT to improve the contextual word embeddings for the target word.
       </p>
       <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
         <!-- <video controls poster="Photos/videoscreen.png">
