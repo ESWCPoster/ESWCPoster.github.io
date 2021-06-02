@@ -219,7 +219,18 @@
         </div>
         <div itemprop="description">
           <p class="lead">
-            First, each pair of entiy and concept (e, c) is compared based on the cosine distance of their real-valued word embeddings generated from two different models: <b>BioWordVec</b>[4] and a custom <b>Word2Vec</b> model. Embeddings from <b>BioWordVec</b> model capture the contextual information around an entity from the unlabelled biomedical text using the MeSH vocabulary. The custom model contains the word embeddings trained on the same articles that were extracted earlier from PubMed Central. When the pair passes the threshold of both the models, it is then passed on to second step, UMLS Metathesaurus.
+            First, each pair of entiy and concept (e, c) is compared based on the cosine distance of their real-valued word embeddings generated from two different models: 
+            <ol>
+              <li class="lead">
+                <b>BioWordVec</b>[4]: model captures the contextual information around an entity from the unlabelled biomedical text using the MeSH vocabulary.
+              </li>
+              <li class="lead">
+                A Custom <b>Word2Vec</b>: model contains the word embeddings trained on the same articles that were extracted earlier from PubMed Central.
+              </li>
+            </ol>
+            <p class="lead">
+              When the pair passes the threshold of both the models, it is then passed on to second step, UMLS Metathesaurus.
+            </p>
           </p>
         </div>
         <div>
@@ -249,9 +260,17 @@
         <meta itemprop="height" content="320">
       </p>
       <p class="lead">
-        In <b>Scenario-1</b>, the entity can be the descendant of the concept itself whereas in <b>Scenario-2</b>, the pair will have a least common ancestor (L). Using <a href="https://metamap.nlm.nih.gov/"><span itemprop="name">UMLS Metamap</span></a>, we compare the number of semantic groups the pairs <b>(e,L)</b> and <b>(c,L)</b> share. A semantic group is a broader group that a term (entity or concept in our case) can be a part of, according to Metamap. Further, we compare the UMLS generated context vectors of <b>(e,c)</b> and <b>L</b> (taken two at a time), using cosine measure. Based on these scores, we determine if <b>e is an instance of c</b>.
-        <br>
-        Do note that if a pair <b>(e,c)</b> is added to the ontology, then the entity <b>e</b> will be added as an instance of all the parent classes of <b>c</b>.
+        <ul>
+          <li class="lead">
+            In <b>Scenario-1</b>, the entity can be the descendant of the concept itself.
+          </li>
+          <li class="lead">
+            In <b>Scenario-2</b>, the pair will have a least common ancestor (L). Using <a href="https://metamap.nlm.nih.gov/"><span itemprop="name">UMLS Metamap</span></a>, we compare the number of semantic groups the pairs <b>(e,L)</b> and <b>(c,L)</b> share. A semantic group is a broader group that a term (entity or concept in our case) can be a part of, according to Metamap. Further, we compare the UMLS generated context vectors of <b>(e,c)</b> and <b>L</b> (taken two at a time), using cosine measure. Based on these scores, we determine if <b>e is an instance of c</b>.
+          </li>
+        </ul>
+        <p class="lead">
+          Do note that if a pair <b>(e,c)</b> is added to the ontology, then the entity <b>e</b> will be added as an instance of all the parent classes of <b>c</b>.
+        </p>
       </p>
     </div>
   </article>
@@ -270,31 +289,28 @@
     <div itemprop="articleBody">
       <h4>DataSet Discussion</h4>
       <p class="lead">
-        We could not find any biomedical ontology that has union and intersection axioms along with the concepts that have instances for evaluating our model. Moreover, there is no dataset having such ontologies and the corresponding text corpora in the medical domain. We choose the Disease ontology[10] as it is rich in such axioms, but it lacks the concept-instance pairs. So we made an approximation here and preprocessed the ontology. We observed that the lowermost leaf-child concept could act as an instance of the directly connected parent class. Subsequently, it can be connected as an instance of all the subsequent parent classes in the hierarchy. This process is executed for all the leaf-nodes in the ontology.
+        We could not find any biomedical ontology that has union and intersection axioms along with the concepts that have instances for evaluating our model. Moreover, there is no dataset having such ontologies and the corresponding text corpora in the medical domain. We choose the Disease Ontology as it is rich in such axioms, but it lacks the concept-instance pairs. So we made an approximation here and preprocessed the ontology. We observed that the lowermost leaf-child concept could act as an instance of the directly connected parent class. Subsequently, it can be connected as an instance of all the subsequent parent classes in the hierarchy. This process is executed for all the leaf-nodes in the ontology.
       </p>
       <h4>Evaluations</h4>
       <p class="lead">
-         We extracted 739 articles from PubMed Central[11] based on the concepts in the Disease Ontology. Within the ontology, there are a total of 10,085 intersection axioms and 323 union axioms. Based on the extracted articles and the Disease ontology, the F1 scores for the union axioms is 0.142, and for the intersection axioms, it is 0.1908.
+         We extracted 739 articles from PubMed Central based on the concepts in the Disease Ontology. Within the ontology, there are a total of 10,085 intersection axioms and 323 union axioms. Based on the extracted articles and the Disease ontology, the F1 scores for the union axioms is 0.142, and for the intersection axioms, it is 0.1908.
       </p>
-      <h4>Future Scorp</h4>
-      <p class="lead">
-        There was the unavailability of a proper dataset consisting of a complete and rich ontology with the corresponding text corpora. Therefore, constructing a relevant dataset and defining baselines are some of the tasks of our future work.
-        <br>
-        Furthermore, to improve the architecture, we are working on incorporating English language pattern heuristics where we can apply the syntactical rules to extract axioms from unstructured text robustly.
-        <br>
-        We are also working on fine-tuned deep learning models like BERT[5] to improve the contextual word embeddings for the target word.
-      </p>
-      <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-        <!-- <video controls poster="Photos/videoscreen.png">
-          <source itemprop="contentUrl" type="video/mp4" src="Photos/video.mp4">
-          <source itemprop="contentUrl" type="video/webm" src="https://hive-framework.philwareham.co.uk/video/big_buck_bunny.webm">
-          I’m sorry, your browser doesn’t support HTML5 video in MP4 with H.264 or WebM with VP8/VP9.
-        </video> -->
-      </div>
+      <h4>Future Scope</h4>
+      <ul class="lead">
+        <li>
+          There was the unavailability of a proper dataset consisting of a complete and rich ontology with the corresponding text corpora. Therefore, constructing a relevant dataset and defining baselines are some of the tasks of our future work.
+        </li>
+        <li>
+          Furthermore, to improve the architecture, we are working on incorporating English language pattern heuristics where we can apply the syntactical rules to extract axioms from unstructured text robustly.
+        </li>
+        <li>
+          We are also working on fine-tuned deep learning models like BERT[5] to improve the contextual word embeddings for the target word.
+        </li>
+      </ul>
     </div>
   </article>
 
-  <br><br>
+  <br>
 
   <hr id="thread4">
   <hr id="thread5" class="right">
@@ -337,7 +353,7 @@
           <li class="list-inline-item"><a href="#">Terms</a></li>
           <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
       </ul>
-      <p class="copyright">Company Name © 2018</p>
+      <p class="copyright">KRaCR Lab © 2021</p>
   </footer>
 </div>
 
