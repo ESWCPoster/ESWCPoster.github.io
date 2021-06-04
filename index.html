@@ -1,349 +1,399 @@
 <!DOCTYPE html>
-<html>
+<html 
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dbp="http://dbpedia.org/property/"
+  xmlns:sc="https://schema.org/"
+  xmlns:part="http://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole/part.owl#"
+  xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#"
+>
+  <head>
+    <meta charset="utf-8">
+    <meat property="dc:creator" href="#nikhil"/>
+    <meat property="dc:creator" href="#monika"/>
+    <meat property="dc:creator" href="#raghava"/>
+    <link rel="foaf:primaryTopic" href="#euiab"/>
+    <meta about="#euiab" property="foaf:topic" content="Extraction of Union and Intersection Axioms from Biomedical Tex"/>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/hr_style.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/card.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
-  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-</head>
+    <link rel="meta" type="application/rdf+xml" title="PubMed Central" href="https://www.ncbi.nlm.nih.gov/pmc/"/>
 
-<body itemscope itemtype="https://schema.org/WebPage">
-<!-- Accessibility levels -->
-  <meta itemprop="accessibilityControl" content="fullKeyboardControl">
-  <meta itemprop="accessibilityControl" content="fullMouseControl">
-  <meta itemprop="accessibilityHazard" content="noFlashingHazard">
-  <meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
-  <meta itemprop="accessibilityHazard" content="noSoundHazard">
-  <meta itemprop="accessibilityAPI" content="ARIA">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hr_style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  </head>
 
-<!-- Header -->
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container" itemscope itemtype="https://schema.org/SiteNavigationElement">
-    <a class="navbar-brand" href="https://kracr-website.web.app/" itemprop="url"><span itemprop="logo">KRaCR Lab</span></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html" itemprop="url">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openreview.net/forum?id=uL5eaPThII2" itemprop="url" itemtype="https://schema.org/ScholarlyArticle">OpenReview Paper</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.youtube.com/watch?v=0KW66BcD6EQ" itemprop="url">Video Link</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<header itemscope itemtype="https://schema.org/WPHeader">
-  <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox" itemscope itemtype="https://schema.org/ItemList">
-      <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" itemscope itemtype="https://schema.org/VideoObject">
-        <video autoplay muted loop id="myVideo" itemprop="video">
-          <source src="Photos/video.mp4" type="video/mp4">
-          Your browser does not support HTML5 video.
-        </video>
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4" itemprop="title"><b><span itemprop="name">Extraction of Union and Intersection Axioms from Biomedical Text</span></b></h3>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="https://kracr.iiitd.edu.in/">KRaCR Lab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html" >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://openreview.net/forum?id=uL5eaPThII2">OpenReview Paper</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/watch?v=0KW66BcD6EQ">Video Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dump.rdf" >RDF Dump</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background: rgb(2,0,36);
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,45,1) 49%, rgba(5,11,32,1) 100%);">
-        <div class="carousel-caption d-none d-md-block" itemprop="blogPost" itemscope itemtype="https://schema.org/CreativeWork">
-          <h3 class="display-4 leftDis" itemprop="about">Abstract</h3>
-          <p class="lead" itemprop="abstract">Many ontology, especially the ones created automatically by
-            the ontology learning systems, have only shallow relationships between
-            the concepts, i.e., simple subclass relations. Expressive axioms such as
-            the class union and intersection are not part of the ontology. These expressive
-            axioms make the ontology rich and play an essential role in the
-            performance of downstream applications. However, such relations can
-            generally be found in the text documents. We propose a mechanism and
-            discuss our initial results in extracting union and intersection axioms
-            from biomedical text using entity linking and taxonomic tree search.</p>
-        </div>
-      </div>
-      
-      <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background: rgb(2,0,36);
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,45,1) 49%, rgba(5,11,32,1) 100%);">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4 leftDis">Authors</h3>
-          <section class="hero-section">
-            <div class="card-grid">
-              <div class="card" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                <div class="card__background" style="background-image: url(Photos/nikhil.jpg)" itemprop="image"></div>
-                <div class="card__content">
-                  <h3 class="card__heading" itemprop="author"><span itemprop="name">Nikhil Sachdeva</span></h3>
-                </div>
-                <div class="card__social">
-                  <a href="https://scholar.google.com/citations?hl=en&user=QbaFVuYAAAAJ" itemprop="url"><i class="fa fa-google"></i></a>
-                  <a href="https://www.linkedin.com/in/nikhil-sachdeva-560093141/" itemprop="url"><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="card" itemscope itemtype="https://schema.org/Person">
-                <div class="card__background" style="background-image: url(Photos/monika.png)" itemprop="image"></div>
-                <div class="card__content">
-                  <h3 class="card__heading"  itemprop="author"><span itemprop="name">Monika Jain</span></h3>
-                </div>
-                <div class="card__social">
-                  <a href="https://scholar.google.com/citations?user=lRf7z-oAAAAJ&hl=en" itemprop="url"><i class="fa fa-google"></i></a>
-                  <a href="https://www.linkedin.com/in/monika-jain-61a4312a/" itemprop="url"><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="card" itemscope itemtype="https://schema.org/Person">
-                <div class="card__background" style="background-image: url(Photos/sir.png)" itemprop="image"></div>
-                <div class="card__content">
-                  <h3 class="card__heading"  itemprop="author"><span itemprop="name">Raghava Mutharaju</span></h3>
-                </div>
-                <div class="card__social">
-                  <a href="https://scholar.google.com/citations?user=69pEM_YAAAAJ&hl=en" itemprop="url"><i class="fa fa-google"></i></a>
-                  <a href="https://www.linkedin.com/in/raghavamutharaju/" itemprop="url"><i class="fa fa-linkedin"></i></a>
-                  <a href="https://twitter.com/mraghava?lang=en" itemprop="url"><i class="fa fa-twitter"></i></a>
-                </div>
-              </div>
-          </section>
-        </div>
-      </div>
-    </div>
-	
-    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-  </div>
-</header>
+    </nav>
 
-<main aria-label="Main content" itemscope itemtype="https://schema.org/Blog">
-
-<!-- Article -->
-  <article class="left-boxing" itemscope itemtype="https://schema.org/Article">
-    <meta itemprop="mainEntityOfPage" content="index.html">
-    <h1 itemprop="headline"><span itemprop="name">Introduction</span></h1>
-    <p class="lead" itemprop="articleBody">
-      Ontology learning [2] is the process of building ontologies automatically from
-      text. Several ontology learning systems [3,1] such as Text2Onto1, Doodle OWL2
-      and DL-Learner3 have been developed. Most of these systems support learning of
-      classes, subclasses and taxonomic relationships. But they do not support mining
-      of more expressive axioms from text such as union, intersection, quantifiers and
-      cardinality relation among the concepts. A richer and more expressive ontology
-      can be very useful to the downstream applications such as recommendation
-      systems and question and answering systems.
-    </p>
-    <p class="lead">
-      We propose a mechanism to extract union and intersection axioms from the text with the help of an ontology and its relevant text. Some examples of intersection and union axioms are as below:
-    </p>
-    <br>
-    <center class="lead"> 
-      <b>   
-        Mixed Glioma ⊑  Astrocytoma ∪ Oligodendroglioma (1)
-      </b> 
-    </center>
-    <br>
-    <center class="lead"> 
-      <b>
-        Tumor ⊑  Benign ⊔ PreMalignant ⊔ Malignant (2)
-      </b>
-    </center>
-    <br>
-    <p class="lead">
-      Take Relation (1). It can be critical in research of missing properties of any disease that is found as a type of Mixed Glioma based on the other classes of diseases in the relation. That is why, enriching the ontologies with such axioms increase their richness in terms of the information they can provide.
-    </p>
-  </article>
-
-  <br>
-
-  <hr id="thread4">
-  <hr id="thread5" class="right">
-  <hr id="thread6">
-
-  <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/Article">
-    <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
-    <div>
-      <h1 itemprop="headline"><span itemprop="name">Proposed Framework</span></h1>
-    </div>
-    <p class="lead">
-      Please refer to the following architecture and the corresponding algorithm:
-    </p>
-    <center>
-      <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-        <img itemprop="url contentUrl" alt="Alt text" src="Photos/model.png" style="width: 40%; height: auto;"> 
-        <img itemprop="url contentUrl" alt="Alt text" src="Photos/algorithm.png" style="width: 40%; height: auto;">
-        <figcaption itemprop="caption">Architecture for extracting union and intersection axioms from the text.</figcaption>
-      </figure>
-      <meta itemprop="width" content="640">
-      <meta itemprop="height" content="320">
-    </center>
-    <div itemprop="articleBody">
-      <p class="lead">
-        As depicted in the architecture, the "Text" refers to all the articles that were extracted from the <a href="https://www.ncbi.nlm.nih.gov/pmc/" itemprop="url"><span itemprop="name">PubMed Central</span></a>. All these articles are extracted based on their relevancy to the concepts of the <a href="https://disease-ontology.org/" itemprop="url"><span itemprop="name">Disease Ontology</span></a>. Then, we extracted all the medically relevant entities, "[E1, E2, E3, ...]", from these articles using the <a href="https://allenai.github.io/scispacy/" itemprop="url"><span itemprop="name">SpaCy models</span></a> for biomedical text processing and the Metamap application for recognizing those entities in the UMLS Metathesaurus.
-        <br><br>
-        Now, every entity is compared against every concept of the Disease Ontology in two steps.
-        <div>
-          <h2 itemprop="headline"><span itemprop="name">Semantic Similarity</span></h2>
-        </div>
-        <div itemprop="description">
-          <p class="lead">
-            First, each pair of entiy and concept (e, c) is compared based on the cosine distance of their real-valued word embeddings generated from two different models: 
-            <ol>
-              <li class="lead">
-                <b>BioWordVec</b>[4]: model captures the contextual information around an entity from the unlabelled biomedical text using the MeSH vocabulary.
-              </li>
-              <li class="lead">
-                A Custom <b>Word2Vec</b>: model contains the word embeddings trained on the same articles that were extracted earlier from PubMed Central.
-              </li>
-            </ol>
-            <p class="lead">
-              When the pair passes the threshold of both the models, it is then passed on to second step, UMLS Metathesaurus.
-            </p>
-          </p>
-        </div>
-        <div>
-          <h2 itemprop="headline"><span itemprop="name">UMLS Graph Search</span></h2>
-        </div>
-        <div itemprop="description">
-          <p class="lead">
-            <b><a href="https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/index.html" itemprop="url"><span itemprop="name">UMLS Metathesaurus</span></a></b> is an semantic network of biomedical entities taken from more than 200 vocabularies. It provides various definitions, taxonomic and non-taxonomic relations for every entity present in the network.
-          </p>
-        </div>
-      </p>
-    </div>
-    <p class="lead">
-      Within Metathesaurus, the pair (e,c) is compared based on two scenarios:
-    </p>
-    <div>
-      <h4 itemprop="name headline">Scenarios</h4>
-    </div>
-    <div itemprop="articleBody">
-      <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-        <center>
-          <img itemprop="url contentUrl" alt="Alt text" src="Photos/part1.png" style="width: 30%; height: 30%;">
-          <img itemprop="url contentUrl" alt="Alt text" src="Photos/part2.png" style="width: 30%; height: 30%;">
-          <figcaption itemprop="caption">(a) represents scenario-1 where entity e is a descendant of concept c and (b) represents scenario-2 where both Entity e and Concept c have a common ancestor L.</figcaption>
-        </center>
-        <meta itemprop="width" content="640">
-        <meta itemprop="height" content="320">
-      </p>
-      <p class="lead">
-        <ul>
-          <li class="lead">
-            In <b>Scenario-1</b>, the entity can be the descendant of the concept itself.
-          </li>
-          <li class="lead">
-            In <b>Scenario-2</b>, the pair will have a least common ancestor (L). Using <a href="https://metamap.nlm.nih.gov/"><span itemprop="name">UMLS Metamap</span></a>, we compare the number of semantic groups the pairs <b>(e,L)</b> and <b>(c,L)</b> share. A semantic group is a broader group that a term (entity or concept in our case) can be a part of, according to Metamap. Further, we compare the UMLS generated context vectors of <b>(e,c)</b> and <b>L</b> (taken two at a time), using cosine measure. Based on these scores, we determine if <b>e is an instance of c</b>.
-          </li>
-        </ul>
-        <p class="lead">
-          Do note that if a pair <b>(e,c)</b> is added to the ontology, then the entity <b>e</b> will be added as an instance of all the parent classes of <b>c</b>.
-        </p>
-      </p>
-    </div>
-  </article>
-  
-  <br><br>
-
-  <hr id="thread1">
-  <hr id="thread2">
-  <hr id="thread3" class="right">
-
-  <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
-    <div>
-      <h1 itemprop="name headline">Results and discussion</h1>
-    </div>
-    <div itemprop="articleBody">
-      <h4>DataSet Discussion</h4>
-      <p class="lead">
-        We could not find any biomedical ontology that has union and intersection axioms along with the concepts that have instances for evaluating our model. Moreover, there is no dataset having such ontologies and the corresponding text corpora in the medical domain. We choose the Disease Ontology as it is rich in such axioms, but it lacks the concept-instance pairs. So we made an approximation here and preprocessed the ontology. We observed that the lowermost leaf-child concept could act as an instance of the directly connected parent class. Subsequently, it can be connected as an instance of all the subsequent parent classes in the hierarchy. This process is executed for all the leaf-nodes in the ontology.
-      </p>
-      <h4>Evaluations</h4>
-      <p class="lead">
-         We extracted 739 articles from PubMed Central based on the concepts in the Disease Ontology. Within the ontology, there are a total of 10,085 intersection axioms and 323 union axioms. Based on the extracted articles and the Disease ontology, the F1 scores for the union axioms is 0.142, and for the intersection axioms, it is 0.1908.
-      </p>
-      <h4>Future Scope</h4>
-      <ul class="lead">
-        <li>
-          There was the unavailability of a proper dataset consisting of a complete and rich ontology with the corresponding text corpora. Therefore, constructing a relevant dataset and defining baselines are some of the tasks of our future work.
-        </li>
-        <li>
-          Furthermore, to improve the architecture, we are working on incorporating English language pattern heuristics where we can apply the syntactical rules to extract axioms from unstructured text robustly.
-        </li>
-        <li>
-          We are also working on fine-tuned deep learning models like BERT[5] to improve the contextual word embeddings for the target word.
-        </li>
-      </ul>
-    </div>
-  </article>
-
-  <br>
-
-  <hr id="thread4">
-  <hr id="thread5" class="right">
-  <hr id="thread6">
-
-  <article class="left-boxing" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="url-of-this-article.html">
-    <div>
-      <h1 itemprop="name headline">References</h1>
-    </div>
-    <div itemprop="articleBody">
-      <p itemprop="description">
-        <ol class="lead">
-          <li>Asim, M.N., Wasim, M., Khan, M.U.G., Mahmood, W., Abbasi, H.M.: A Survey of Ontology Learning Techniques and Applications. Database (2018)</li>
-          <li> Lehmann, J., Volker, J.: An Introduction to Ontology Learning. In: Perspectives on Ontology Learning, pp. ix–xvi. IOS Press (2014)</li>
-          <li> Wong, W., Liu, W., Bennamoun, M.: Ontology Learning from Text: A look Back and into the Future. ACM Computing Surveys (2012)</li>
-          <li>Yijia, Z., Chen, Q., Yang, Z., Lin, H., lu, Z.: Biowordvec, Improving Biomedical Word Embeddings with Subword Information and Mesh. Scientific Data (Dec 2019)</li>
-          <li> Devlin, J., Chang, M.W., Lee, K., Toutanova, K.: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. In: Proceedings of the 2019 Conference of the NAACL) (Jun 2019)</li>
-          <li>Karadeniz, I., Ozgur, A.: Linking Entities through an Ontology using Word Embeddings and Syntactic Re-ranking. BMC Bioinformatics (Dec 2019)</li>
+    <header>
+      <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselIndicators" data-slide-to="2"></li>
         </ol>
-      </p>
+        <div class="carousel-inner">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active">
+            <video autoplay muted loop id="myVideo" >
+              <source src="Photos/video.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-4"><b>ESWC' 21</b></h1>
+              <h3 class="display-4"><b><span>Extraction of Union and Intersection Axioms from Biomedical Text</span></b></h3>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" about="#euiab" style="background: rgb(2,0,36);
+          background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,45,1) 49%, rgba(5,11,32,1) 100%);">
+            <meat property="dc:abstract" href="#abstract"/>
+            <div class="carousel-caption d-none d-md-block" about="#abstract">
+              <h3 class="display-4 leftDis"><span property="dc:title">Abstract</span></h3>
+              <p class="lead" property="dc:description">Many ontology, especially the ones created automatically by
+                the ontology learning systems, have only shallow relationships between
+                the concepts, i.e., simple subclass relations. Expressive axioms such as
+                the class union and intersection are not part of the ontology. These expressive
+                axioms make the ontology rich and play an essential role in the
+                performance of downstream applications. However, such relations can
+                generally be found in the text documents. We propose a mechanism and
+                discuss our initial results in extracting union and intersection axioms
+                from biomedical text using entity linking and taxonomic tree search.</p>
+            </div>
+          </div>
+          
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background: rgb(2,0,36);
+          background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,45,1) 49%, rgba(5,11,32,1) 100%);">
+            <div class="carousel-caption d-none d-md-block">
+              <h3 class="display-4 leftDis">Authors</h3>
+              <section class="hero-section">
+                <div class="card-grid">
+                  <div class="card" about="#nikhil" typeOf="foaf:Person">
+                    <div class="card__background" style="background-image: url(Photos/nikhil.jpg)" property="foaf:img" content="Photos/nikhil.jpg"></div>
+                    <div class="card__content">
+                      <h3 class="card__heading"><span property="foaf:name">Nikhil Sachdeva</span></h3>
+                    </div>
+                    <div class="card__social">
+                      <a href="https://scholar.google.com/citations?hl=en&user=QbaFVuYAAAAJ" ><i class="fa fa-google"></i></a>
+                      <a href="https://www.linkedin.com/in/nikhil-sachdeva-560093141/" ><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                  <div class="card" about="#monika" typeOf="foaf:Person">
+                    <div class="card__background" style="background-image: url(Photos/monika.png)" property="foaf:img" content="Photos/monika.png"></div>
+                    <div class="card__content">
+                      <h3 class="card__heading" ><span property="foaf:name">Monika Jain</span></h3>
+                    </div>
+                    <div class="card__social">
+                      <a href="https://scholar.google.com/citations?user=lRf7z-oAAAAJ&hl=en"><i class="fa fa-google"></i></a>
+                      <a href="https://www.linkedin.com/in/monika-jain-61a4312a/"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                  <div class="card" about="#raghava" typeOf="foaf:Person">
+                    <div class="card__background" style="background-image: url(Photos/sir.png)" property="foaf:img" content="Photos/sir.png"></div>
+                    <div class="card__content">
+                      <h3 class="card__heading"><span property="foaf:name">Raghava Mutharaju</span></h3>
+                    </div>
+                    <div class="card__social">
+                      <a href="https://scholar.google.com/citations?user=69pEM_YAAAAJ&hl=en"><i class="fa fa-google"></i></a>
+                      <a href="https://www.linkedin.com/in/raghavamutharaju/" ><i class="fa fa-linkedin"></i></a>
+                      <a href="https://twitter.com/mraghava?lang=en" ><i class="fa fa-twitter"></i></a>
+                    </div>
+                  </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      
+        <a class="carousel-control-prev" href="#carouselIndicators" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+        <a class="carousel-control-next" href="#carouselIndicators" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+      </div>
+    </header>
+
+    <main aria-label="Main content">
+
+    <!-- Article -->
+      <article class="left-boxing" about="#euiab">
+        <meat property="dc:introduction" href="#intro"/>
+        <span about="#intro"><h1><span property="dc:title">Introduction</span></h1>
+          <p class="lead" rel="sc:citation">
+            <span><span property="dc:title">Ontology learning</span><span property="sc:relatedLink"><a href="#[2]">[2]</a></span></span> is the process of building ontologies automatically from
+            text. Several ontology learning systems <a href="#[1]">[3,1]</a> such as Text2Onto1, Doodle OWL2
+            and DL-Learner3 have been developed. Most of these systems support learning of
+            classes, subclasses and taxonomic relationships. But they do not support mining
+            of more expressive axioms from text such as union, intersection, quantifiers and
+            cardinality relation among the concepts. A richer and more expressive ontology
+            can be very useful to the downstream applications such as recommendation
+            systems and question and answering systems.
+          </p>
+          <span rel="sc:citation">
+            <meta property="dc:title" content="Ontology Learning Systems"/>
+            <meta property="sc:relatedLink" content="[3]"/>
+            <meta property="sc:relatedLink" content="[1]"/>
+          </span>
+        </span>
+        <p class="lead">
+          We propose a mechanism to extract union and intersection axioms from the text with the help of an ontology and its relevant text. Some examples of intersection and union axioms are as below:
+        </p>
+        <br>
+        <center class="lead"> 
+          <b>   
+            Mixed Glioma ⊑  Astrocytoma ∪ Oligodendroglioma (1)
+          </b> 
+        </center>
+        <br>
+        <center class="lead"> 
+          <b>
+            Tumor ⊑  Benign ⊔ PreMalignant ⊔ Malignant (2)
+          </b>
+        </center>
+        <br>
+        <p class="lead">
+          Take Relation (1). It can be critical in research of missing properties of any disease that is found as a type of Mixed Glioma based on the other classes of diseases in the relation. That is why, enriching the ontologies with such axioms increase their richness in terms of the information they can provide.
+        </p>
+      </article>
+
+      <br>
+
+      <hr id="thread4">
+      <hr id="thread5" class="right">
+      <hr id="thread6">
+
+      <article class="left-boxing" about="#euiab">
+        <meta property="dbp:architecture" href="#framework"/>
+        <span about="#framework">
+          <div>
+            <h1><span property="dc:title">Proposed Framework</span></h1>
+          </div>
+          <p class="lead">
+            Please refer to the following architecture and the corresponding algorithm:
+          </p>
+          <meta property="sc:algorithm" href="#algorithm"/>
+          <meta property="sc:model" href="#model"/>
+          <center>
+            
+            <figure>
+              <span about="#model">
+                <img typeOf="foaf:Image" property="foaf:depiction" alt="Alt text" src="Photos/model.png" style="width: 40%; height: auto;">
+              </span>
+              <span about="#algorithm" rel="foaf:depiction">
+                <img typeOf="foaf:Image" alt="Alt text" src="Photos/algorithm.png" style="width: 40%; height: auto;">
+              <figcaption property="sc:caption">Architecture for extracting union and intersection axioms from the text.</figcaption>
+              </span>
+            </figure>
+          </center>
+          <div>
+            <span about="#model">
+              <meta property="part:hasPart" href="#semantic"/>
+              <p class="lead">
+                <span rel="sc:relatedLink">
+                As depicted in the architecture, the "Text" refers to all the articles that were extracted from the <a href="https://www.ncbi.nlm.nih.gov/pmc/"><span property="dc:title">PubMed Central</span></a>. All these articles are extracted based on their relevancy to the concepts of the <a href="https://disease-ontology.org/"><span property="dc:title">Disease Ontology</span></a>. Then, we extracted all the medically relevant entities, "[E1, E2, E3, ...]", from these articles using the <a href="https://allenai.github.io/scispacy/"><span property="dc:title">SpaCy models</span></a> for biomedical text processing and the Metamap application for recognizing those entities in the UMLS Metathesaurus.
+                </span>
+                <br><br>
+                Now, every entity is compared against every concept of the Disease Ontology in two steps.
+                <div about="#semantic">
+                  <h2><span property="dc:title">Semantic Similarity</span></h2>
+                </div>
+                <div>
+                  <span about="#semantic">
+                    <p class="lead">
+                      First, each pair of entiy and concept (e, c) is compared based on the cosine distance of their real-valued word embeddings generated from two different models: 
+                      <ol>
+                        <li class="lead">
+                          <span rel="part:hasPart">
+                            <b><span property="dc:title">BioWordVec</span></b><span property="sc:citation"><a href="#[4]">[4]</a></span>: model captures the contextual information around an entity from the unlabelled biomedical text using the MeSH vocabulary.
+                          </span>
+                        </li>
+                        <li class="lead">
+                          <span rel="part:hasPart">
+                            A Custom <b><span property="dc:title"><span property="sc:relatedLink" href="https://code.google.com/archive/p/word2vec/">Word2Vec</span></span></b>: model contains the word embeddings trained on the same articles that were extracted earlier from PubMed Central.
+                          </span>
+                        </li>
+                      </ol>
+                      <p class="lead">
+                        When the pair passes the threshold of both the models, it is then passed on to second step, UMLS Metathesaurus.
+                      </p>
+                    </p>
+                  </span>
+                </div>
+              </p>
+            </span>
+          </div>
+          <div about="#model">
+            <meta property="part:hasPart" href="#umls"/>
+            <span about="#umls">
+              <div>
+                <h2><span property="#dc:title">UMLS Graph Search</span></h2>
+              </div>
+              <div>
+                <p class="lead">
+                  <span rel="part:hasPart">
+                    <b><a property="sc:relatedLink" href="https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/index.html"><span property="dc:title">UMLS Metathesaurus</span></a></b> is an semantic network of biomedical entities taken from more than 200 vocabularies. It provides various definitions, taxonomic and non-taxonomic relations for every entity present in the network.
+                  </span>
+                </p>
+              </div>
+              <p class="lead">
+                Within Metathesaurus, the pair (e,c) is compared based on two scenarios:
+              </p>
+              <div>
+                <h4>Scenarios</h4>
+              </div>
+              <div>
+                <p>
+                  <center>
+                    <img alt="Alt text" src="Photos/part1.png" style="width: 30%; height: 30%;">
+                    <img alt="Alt text" src="Photos/part2.png" style="width: 30%; height: 30%;">
+                    <figcaption>(a) represents scenario-1 where entity e is a descendant of concept c and (b) represents scenario-2 where both Entity e and Concept c have a common ancestor L.</figcaption>
+                  </center>
+                </p>
+                <p class="lead">
+                  <ul>
+                    <li class="lead">
+                      In <b>Scenario-1</b>, the entity can be the descendant of the concept itself.
+                    </li>
+                    <li class="lead">
+                      <span rel="part:hasPart">
+                        In <b>Scenario-2</b>, the pair will have a least common ancestor (L). Using <a property="sc:relatedLink" href="https://metamap.nlm.nih.gov/"><span property="dc:title">UMLS Metamap</span></a>, we compare the number of semantic groups the pairs <b>(e,L)</b> and <b>(c,L)</b> share. A semantic group is a broader group that a term (entity or concept in our case) can be a part of, according to Metamap. Further, we compare the UMLS generated context vectors of <b>(e,c)</b> and <b>L</b> (taken two at a time), using cosine measure. Based on these scores, we determine if <b>e is an instance of c</b>.
+                      </span>
+                    </li>
+                  </ul>
+                  <p class="lead">
+                    Do note that if a pair <b>(e,c)</b> is added to the ontology, then the entity <b>e</b> will be added as an instance of all the parent classes of <b>c</b>.
+                  </p>
+                </p>
+              </div>
+            </span>
+          </div>
+        </span>
+      </article>
+      
+      <br><br>
+
+      <hr id="thread1">
+      <hr id="thread2">
+      <hr id="thread3" class="right">
+
+      <article class="left-boxing">
+        <div>
+          <h1>Results and discussion</h1>
+        </div>
+        <div about="#euiab">
+          <h4>DataSet Discussion</h4>
+          <p class="lead">
+            We could not find any biomedical ontology that has union and intersection axioms along with the concepts that have instances for evaluating our model. Moreover, there is no dataset having such ontologies and the corresponding text corpora in the medical domain. We choose the Disease Ontology as it is rich in such axioms, but it lacks the concept-instance pairs. So we made an approximation here and preprocessed the ontology. We observed that the lowermost leaf-child concept could act as an instance of the directly connected parent class. Subsequently, it can be connected as an instance of all the subsequent parent classes in the hierarchy. This process is executed for all the leaf-nodes in the ontology.
+          </p>
+          <h4>Evaluations</h4>
+          <p class="lead">
+            We extracted 739 articles from PubMed Central based on the concepts in the Disease Ontology. Within the ontology, there are a total of 10,085 intersection axioms and 323 union axioms. Based on the extracted articles and the Disease ontology, the F1 scores for the union axioms is 0.142, and for the intersection axioms, it is 0.1908.
+          </p>
+          <h4>Future Scope</h4>
+          <meta property="dbp:future" href="#scope"/>
+          <ul class="lead">
+            <li>
+              There was the unavailability of a proper dataset consisting of a complete and rich ontology with the corresponding text corpora. Therefore, constructing a relevant dataset and defining baselines are some of the tasks of our future work.
+            </li>
+            <li>
+              Furthermore, to improve the architecture, we are working on incorporating English language pattern heuristics where we can apply the syntactical rules to extract axioms from unstructured text robustly.
+            </li>
+            <li>
+              <span rel="sc:citation" about="#scope">
+                We are also working on fine-tuned deep learning models like <span property="sc:title">BERT</span><span property="sc:relatedLink"><a href="#[5]">[5]</a></span> to improve the contextual word embeddings for the target word.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <br>
+
+      <hr id="thread4">
+      <hr id="thread5" class="right">
+      <hr id="thread6">
+
+      <article class="left-boxing" about="#euiab">
+        <meta property="sc:citation" href="#ref"/>
+        <span about="#ref">
+          <div>
+            <h1>References</h1>
+          </div>
+          <meta property="sc:hasPart" content="[1]"/>
+          <meta property="sc:hasPart" content="[2]"/>
+          <meta property="sc:hasPart" content="[3]"/>
+          <meta property="sc:hasPart" content="[4]"/>
+          <meta property="sc:hasPart" content="[5]"/>
+          <meta property="sc:hasPart" content="[6]"/>
+          <div>
+            <p>
+              <ol class="lead">
+                <li id="[1]"><span about="#[1]" property="doc:version">Asim, M.N., Wasim, M., Khan, M.U.G., Mahmood, W., Abbasi, H.M.: A Survey of Ontology Learning Techniques and Applications. Database (2018)</span></li>
+                <li id="[2]"><span about="#[2]" property="doc:version">Lehmann, J., Volker, J.: An Introduction to Ontology Learning. In: Perspectives on Ontology Learning, pp. ix–xvi. IOS Press (2014)</span></li>
+                <li id="[3]"><span about="#[3]" property="doc:version">Wong, W., Liu, W., Bennamoun, M.: Ontology Learning from Text: A look Back and into the Future. ACM Computing Surveys (2012)</span></li>
+                <li id="[4]"><span about="#[4]" property="doc:version">Yijia, Z., Chen, Q., Yang, Z., Lin, H., lu, Z.: Biowordvec, Improving Biomedical Word Embeddings with Subword Information and Mesh. Scientific Data (Dec 2019)</span></li>
+                <li id="[5]"><span about="#[5]" property="doc:version">Devlin, J., Chang, M.W., Lee, K., Toutanova, K.: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. In: Proceedings of the 2019 Conference of the NAACL) (Jun 2019)</span></li>
+                <li id="[6]"><span about="#[6]" property="doc:version">Karadeniz, I., Ozgur, A.: Linking Entities through an Ontology using Word Embeddings and Syntactic Re-ranking. BMC Bioinformatics (Dec 2019)</span></li>
+              </ol>
+            </p>
+          </div>
+        </span>
+      </article>
+
+      <br><br>
+
+      <hr id="thread1">
+      <hr id="thread2">
+      <hr id="thread3" class="right">  
+
+    </main>
+
+    <div class="footer-basic">
+      <footer>
+          <div class="social"><a href="https://in.linkedin.com/in/kracr-lab-425762204"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="https://github.com/kracr"><i class="fa fa-github"></i></a></div>
+          <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Home</a></li>
+              <li class="list-inline-item"><a href="https://kracr.iiitd.edu.in/">Lab</a></li>
+              <li class="list-inline-item"><a href="https://kracr.iiitd.edu.in/team">About</a></li>
+          </ul>
+          <p class="copyright">KRaCR Lab © 2021</p>
+      </footer>
     </div>
-  </article>
 
-  <br><br>
-
-  <hr id="thread1">
-  <hr id="thread2">
-  <hr id="thread3" class="right">  
-
-</main>
-
-<div class="footer-basic">
-  <footer>
-      <div class="social"><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-facebook"></i></a></div>
-      <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Home</a></li>
-          <li class="list-inline-item"><a href="#">Services</a></li>
-          <li class="list-inline-item"><a href="#">About</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-      </ul>
-      <p class="copyright">KRaCR Lab © 2021</p>
-  </footer>
-</div>
-
-</body>
+  </body>
 </html>

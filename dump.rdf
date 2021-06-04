@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dbp="http://dbpedia.org/property/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:part="http://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole/part.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:sc="https://schema.org/"
+>
+  <rdf:Description rdf:nodeID="Nd07e7791b4c6472094e2818d33b7a0a1">
+    <sc:relatedLink rdf:resource="https://code.google.com/archive/p/word2vec/"/>
+    <dc:title>Word2Vec</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="#model">
+    <sc:relatedLink rdf:resource="https://disease-ontology.org/"/>
+    <foaf:depiction rdf:resource="Photos/model.png"/>
+    <part:hasPart rdf:resource="#umls"/>
+    <sc:relatedLink rdf:resource="https://www.ncbi.nlm.nih.gov/pmc/"/>
+    <part:hasPart rdf:resource="#semantic"/>
+    <sc:relatedLink rdf:resource="https://allenai.github.io/scispacy/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#abstract">
+    <dc:description>Many ontology, especially the ones created automatically by
+                the ontology learning systems, have only shallow relationships between
+                the concepts, i.e., simple subclass relations. Expressive axioms such as
+                the class union and intersection are not part of the ontology. These expressive
+                axioms make the ontology rich and play an essential role in the
+                performance of downstream applications. However, such relations can
+                generally be found in the text documents. We propose a mechanism and
+                discuss our initial results in extracting union and intersection axioms
+                from biomedical text using entity linking and taxonomic tree search.</dc:description>
+    <dc:title>Abstract</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbcf979b7efe64b34be319ebacd487f27">
+    <dc:title>Ontology Learning Systems</dc:title>
+    <sc:relatedLink>[3]</sc:relatedLink>
+    <sc:relatedLink>[1]</sc:relatedLink>
+  </rdf:Description>
+  <rdf:Description rdf:about="#algorithm">
+    <foaf:depiction rdf:resource="Photos/algorithm.png"/>
+    <foaf:depiction rdf:nodeID="N1d8cb3e1c8f546fa9c462c439b506990"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ref">
+    <sc:hasPart>[2]</sc:hasPart>
+    <sc:hasPart>[5]</sc:hasPart>
+    <sc:hasPart>[1]</sc:hasPart>
+    <sc:hasPart>[6]</sc:hasPart>
+    <sc:hasPart>[3]</sc:hasPart>
+    <sc:hasPart>[4]</sc:hasPart>
+  </rdf:Description>
+  <rdf:Description rdf:about="#euiab">
+    <dc:abstract rdf:resource="#abstract"/>
+    <dc:introduction rdf:resource="#intro"/>
+    <foaf:topic>Extraction of Union and Intersection Axioms from Biomedical Tex</foaf:topic>
+    <sc:citation rdf:resource="#ref"/>
+    <dbp:architecture rdf:resource="#framework"/>
+    <dbp:future rdf:resource="#scope"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#framework">
+    <sc:model rdf:resource="#model"/>
+    <dc:title>Proposed Framework</dc:title>
+    <sc:algorithm rdf:resource="#algorithm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#intro">
+    <dc:title>Introduction</dc:title>
+    <sc:citation rdf:nodeID="Nbcf979b7efe64b34be319ebacd487f27"/>
+    <sc:citation rdf:resource="#[1]"/>
+    <sc:citation rdf:nodeID="N84776819f063423697872f851cc8d5b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="Photos/model.png">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#monika">
+    <foaf:img>Photos/monika.png</foaf:img>
+    <foaf:name>Monika Jain</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#[5]">
+    <doc:version>Devlin, J., Chang, M.W., Lee, K., Toutanova, K.: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. In: Proceedings of the 2019 Conference of the NAACL) (Jun 2019)</doc:version>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://disease-ontology.org/">
+    <dc:title>Disease Ontology</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1d8cb3e1c8f546fa9c462c439b506990">
+    <sc:caption>Architecture for extracting union and intersection axioms from the text.</sc:caption>
+  </rdf:Description>
+  <rdf:Description rdf:about="#[1]">
+    <doc:version>Asim, M.N., Wasim, M., Khan, M.U.G., Mahmood, W., Abbasi, H.M.: A Survey of Ontology Learning Techniques and Applications. Database (2018)</doc:version>
+  </rdf:Description>
+  <rdf:Description rdf:about="#umls">
+    <part:hasPart rdf:nodeID="N38f5198b3aef457b9733cd9aa95e9f86"/>
+    <part:hasPart rdf:nodeID="N4b780a009f8b4dceb45f4c70509c5b5a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://allenai.github.io/scispacy/">
+    <dc:title>SpaCy models</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="#[6]">
+    <doc:version>Karadeniz, I., Ozgur, A.: Linking Entities through an Ontology using Word Embeddings and Syntactic Re-ranking. BMC Bioinformatics (Dec 2019)</doc:version>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf72c0b3a4a134aae99dd2961f7bea4fc">
+    <dc:title>BioWordVec</dc:title>
+    <sc:citation>[4]</sc:citation>
+  </rdf:Description>
+  <rdf:Description rdf:about="#semantic">
+    <dc:title>Semantic Similarity</dc:title>
+    <part:hasPart rdf:nodeID="Nd07e7791b4c6472094e2818d33b7a0a1"/>
+    <part:hasPart rdf:nodeID="Nf72c0b3a4a134aae99dd2961f7bea4fc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#[3]">
+    <doc:version>Wong, W., Liu, W., Bennamoun, M.: Ontology Learning from Text: A look Back and into the Future. ACM Computing Surveys (2012)</doc:version>
+  </rdf:Description>
+  <rdf:Description rdf:about="#raghava">
+    <foaf:img>Photos/sir.png</foaf:img>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:name>Raghava Mutharaju</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N38f5198b3aef457b9733cd9aa95e9f86">
+    <dc:title>UMLS Metathesaurus</dc:title>
+    <sc:relatedLink rdf:resource="https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/index.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4b780a009f8b4dceb45f4c70509c5b5a">
+    <dc:title>UMLS Metamap</dc:title>
+    <sc:relatedLink rdf:resource="https://metamap.nlm.nih.gov/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#nikhil">
+    <foaf:name>Nikhil Sachdeva</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:img>Photos/nikhil.jpg</foaf:img>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N84776819f063423697872f851cc8d5b6">
+    <sc:relatedLink>[2]</sc:relatedLink>
+    <dc:title>Ontology learning</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.ncbi.nlm.nih.gov/pmc/">
+    <dc:title>PubMed Central</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="Photos/algorithm.png">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0092b69870fd4a0087e8520cc662d778">
+    <sc:relatedLink>[5]</sc:relatedLink>
+    <sc:title>BERT</sc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="#[2]">
+    <doc:version>Lehmann, J., Volker, J.: An Introduction to Ontology Learning. In: Perspectives on Ontology Learning, pp. ix–xvi. IOS Press (2014)</doc:version>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <dc:creator rdf:resource="#raghava"/>
+    <dc:creator rdf:resource="#nikhil"/>
+    <dc:creator rdf:resource="#monika"/>
+    <foaf:primaryTopic rdf:resource="#euiab"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#scope">
+    <sc:citation rdf:nodeID="N0092b69870fd4a0087e8520cc662d778"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#[4]">
+    <doc:version>Yijia, Z., Chen, Q., Yang, Z., Lin, H., lu, Z.: Biowordvec, Improving Biomedical Word Embeddings with Subword Information and Mesh. Scientific Data (Dec 2019)</doc:version>
+  </rdf:Description>
+</rdf:RDF>
+
