@@ -306,6 +306,27 @@ Some examples of intersection and union axioms are as below:
               </div>
             </span>
           </div>
+          <div about="#model">
+            <meta property="part:hasPart" href="#axiom"/>
+            <span about="#axiom">
+              <div>
+                <h2><span property="#dc:title">Axiom Formation</span></h2>
+              </div>
+              <div>
+                <p class="lead">
+                  We get a list of concepts with their corresponding sets of instances (entities). Using these instances, we compute union and intersection of the concepts based on the below formula:
+                </p>
+                <br>
+                <center><b>   
+                  totalsets = <sup>n</sup>C<sub>1</sub>+<sup>n</sup>C<sub>2</sub>+<sup>n</sup>C<sub>3</sub>+<sup>n</sup>C<sub>4</sub>+<sup>n</sup>C<sub>5</sub>+<sup>n</sup>C<sub>6</sub>
+                </b></center>
+                <br><br>
+                <p class="lead">
+                  where each <b class="lead"><sup>n</sup>C<sub>i</sub></b> represents sets of <b>i</b> concepts. Each of these sets is compared with every candidate concept to check for union and intersection axioms. For example, to obtain  Axiom-1, the intersection of instances of <b>Astrocytoma</b> and <b>Oligodendroglioma</b> is compared with the instances of <b>Mixed Glioma</b>. If the latter is a subset of the former, we can add this axiom to the ontology. We have considered such combinations up to a size of 6. The size was determined using experiments by comparing the F1 scores of sets of different size.
+                </p>
+              </div>
+            </span>
+          </div>
         </span>
       </article>
       
